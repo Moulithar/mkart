@@ -1,0 +1,100 @@
+.mainfooter{
+    background-color: #f9f9f9;
+}
+
+.main-footer-left .border-right{
+    border-right: 1px solid #b4b4b4;
+    height: 50px;
+    position:absolute;
+    left: 580px;
+    top:30px;
+}
+
+.main-footer-left{
+    padding: 20px 0px;
+    position: relative;
+}
+.formcontrol{
+    margin-top:10px;
+    padding: 13px;
+    margin-left: 200px;
+    width: 245px;
+    border-radius: 0;
+    border: 1px solid #eee;
+    height: auto;
+}
+.btn-footer{
+    border-radius: 0px;
+    border-color: #ff5141;
+    background: #ff5141; 
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.formcontro1 .btn-primary :hover{
+    background-color: #4e211d;
+}
+
+.btn-primary {
+    
+    /* --bs-btn-hover-bg: linear-gradient(30deg,#ff5141 50%,transparent 50%); */
+    --bs-btn-hover-bg: #ff5141;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ff5141;
+}
+h6{
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    font-weight: 800;
+}
+p{
+    color:#878787
+}
+ul{
+    margin-left: 0px;
+    padding-left: 0%;
+}
+ul li{
+    list-style: none;
+    text-decoration: underline;
+}
+      a { 
+        color: #666;
+        display:inline-block; 
+        margin:0;
+        text-transform: capitalize; 
+        position: relative;
+        color: #878787;
+        text-decoration: underline;
+        font-weight: 200;
+        font-size: 15px;
+        }
+
+      a:after {
+        display:block;
+        content: '';
+        padding-top: 1px;
+        border-bottom: solid 3px #ff5141;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+        width:50px;
+        
+      }
+      a:hover{
+        color:#878787;
+      }
+      /* a:hover {
+        color: var(--bs-link-hover-color);
+    }
+     */
+
+    a.fromleft:after{ transform-origin: 100% 50%; }
+    a.fromleft:hover:after{ transform: scaleX(1); transform-origin:   0% 50%; } 
+
+    @media screen and (max-width:992px){
+        .main-footer-left .border-right{
+            display: none;
+        }
+        
+    }
