@@ -19,13 +19,13 @@ const Header = ()=>
           <Row>
           <div className="d-flex justify-content-start align-items-center gap-5 left-header-top">
             <p>welcome to our store multicart</p>
-            <p>Call Us: 123 - 456 - 7890</p>
+            <p><i className="icons bi bi-telephone-fill"> &nbsp; </i>Call Us: 123 - 456 - 7890</p>
           </div> 
           </Row>
           <Row>
           <div className="d-flex justify-content-end align-items-center gap-5 right-header-top">
-            <p>wishlist</p>
-            <p>account</p>
+            <p><i className="icons bi bi-heart-fill"></i> &nbsp; wishlist</p>
+            <p><i className=" icons bi bi-person-fill"> &nbsp; </i> account</p>
           </div>
           </Row>  
         </Container>

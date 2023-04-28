@@ -24,6 +24,40 @@ h3{
     position: relative;
     margin-bottom: 40px;
 }
+.icons{
+    color:rgb(98, 98, 98);
+    cursor:pointer !important;
+}
+.icons:hover{
+    color:#ff5141 !important;
+}
+/* 
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#ff5141;
+}
+.bi:hover, [class^="bi-"]:hover, [class*=" bi-"]:hover{
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#1a0807;
+} */
 
  /* .borderbottom{
     position:absolute;

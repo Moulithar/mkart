@@ -6,6 +6,8 @@ import Offer from "../components/Offer/Offer";
 import Special from "../components/Special/Special";
 import Mainfooter from"../components/Mainfooter/Mainfooter";
 import Bottomfooter from"../components/Bottomfooter/Bottomfooter";
+import $ from 'jquery'; 
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./assets/styles/index.css";
 import "../components/Style/icon.css";
 

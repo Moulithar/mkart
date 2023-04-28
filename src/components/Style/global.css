@@ -1,2 +1,4 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../components/Style/mediamax992.css";
+@import "../../components/Style/mediamax767.css";
 /* @import './icons.css'; */

@@ -1,0 +1,7 @@
+@media screen and (max-width:992px){
+    .banner .bannertext {
+        position: absolute;
+        top: 96px;
+        left: 400px;
+    }
+}

@@ -20,6 +20,15 @@ body{
     .header-top {
         display:none;
     }
+    .formcontrol {
+        margin-top: 10px;
+        padding: 13px;
+        margin-left: 0px;
+        width: 245px;
+        border-radius: 0;
+        border: 1px solid #eee;
+        height: auto;
+    }
 }
 .right-header-top{
     margin-top: -65px;

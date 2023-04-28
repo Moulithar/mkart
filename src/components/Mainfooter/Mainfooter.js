@@ -21,7 +21,7 @@ const Mainfooter = ()=>
                         </div>
                     </Col>
                     <Col lg={6}>
-                        <Form className="d-flex">
+                        <Form className="d-flex gap-2 justify-content-lg-end justify-content-md-start">
                         <Form.Control className="formcontrol"
                             type="name"
                             placeholder="Enter your email"
