@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../components/Style/global.css";
 import Header from "../components/Header/Header";
+import Owl from "../components/Owl/Owl";
 import Banner from "../components/Banner/Banner";
 import Offer from "../components/Offer/Offer";
 import Special from "../components/Special/Special";
@@ -16,6 +17,7 @@ const IndexPage = () =>
   return (
     <>
     <Header />
+    <Owl /> 
     <Banner />
     <Offer />
     <Special />

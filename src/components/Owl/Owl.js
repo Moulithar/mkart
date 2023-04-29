@@ -1,15 +1,48 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-// import images1 from "./assets/images/1.jpg";
-import "./assets/style/index.css";
-import $ from 'jquery';
+import Slider from "react-slick";
+import { Container, Row, Col } from 'react-bootstrap';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import bannerimg from "../../images/banner.jpg";
+import bannersecond from "../../images/banner-black.jpg";
+import "./assets/styles/index.css";
 
 const Owl= ()=>
+
 {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     return(
-<p>hello</p>
+        <>
+        <section className="slider-banner">
+            <Slider {...settings}>
+                {/* <div>
+                    <div className="bannerimg"></div>
+                </div> */}
+                <div>
+                    <img src={bannerimg} />
+                    <div className="content">
+                    <h2>welcome to fashion</h2>
+                    <h4>men fashion</h4>
+                  
+                    </div>
+                </div>
+                <div>
+                    <img src={bannersecond} />
+                    <div className="content">
+                   <h2> welcome to fashion</h2>
+                    <h4>women fashion</h4>
+                    </div>
+                </div>
+            </Slider>
+        </section>
+        </>
+     
     );
 }
 

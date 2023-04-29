@@ -20,7 +20,7 @@ const Bottomfooter = ()=>
                 <Container>
                     <Row>
                         <Col lg={6}>
-                            <p> 2021-22 themeforest powered by pixelstrap</p>
+                            <p> 2022-23 mkartpowered by pixelstrap</p>
                         </Col>
                        
                         <Col lg={6} className="d-flex justify-content-end gap-2">

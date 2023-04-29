@@ -6,7 +6,7 @@
 }
 
  .bannerimg  {
-    width: 100%;
+    /* width: 100%; */
     transition: 0.5s all ease-in-out;
 }
    .bannerimg:hover {
@@ -25,4 +25,12 @@
         top: 96px;
         left: 400px;
     }
+}
+@media screen and (max-width:767px){
+    .banner .bannertext {
+        position: absolute;
+        top: 22px;
+        left: 105px;
+    }
+
 }
