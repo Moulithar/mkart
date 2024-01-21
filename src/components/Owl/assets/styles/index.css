@@ -4,64 +4,79 @@
     background-repeat: no-repeat;
     background-position: center;
 } */
-.slider-banner .slick-slider{
-    overflow: hidden;
-  
+.slider-banner .slick-slider {
+  overflow: hidden;
 }
 .content {
-    position:relative;
+  position: relative;
 }
-    .content h2{
-        position: absolute;
-        font-size: 50px;
-        font-weight: 900;
-        top:-330px;
-        left: 100px;
-        text-transform: uppercase;
-        color: #ff4c3b;
-    }
-    .content h4{
-        position: absolute;
-        font-size: 25px;
-        font-weight: 600;
-        top:-250px;
-        left: 100px;
-        text-transform: uppercase;
-        color: #000000;
-    }
+.content h2 {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 900;
+  top: -330px;
+  left: 100px;
+  text-transform: uppercase;
+  color: #ff4c3b;
+}
+.content h4 {
+  position: absolute;
+  font-size: 25px;
+  font-weight: 600;
+  top: -250px;
+  left: 100px;
+  text-transform: uppercase;
+  color: #000000;
+}
 
-    @media screen and (max-width:992px){
-        .content h2{
-            position: absolute;
-            font-size: 35px;
-            top:-250px;
-            left: 100px;
-            text-transform: uppercase;
-            color: #ff4c3b;
-        }
-        .content h4{
-            position: absolute;
-            font-size: 22px;
-            top:-200px;
-            left: 100px;
-            text-transform: uppercase;
-            color: #000000;
-        }
-    }
+@media screen and (max-width: 992px) {
+  .content h2 {
+    position: absolute;
+    font-size: 35px;
+    top: -250px;
+    left: 100px;
+    text-transform: uppercase;
+    color: #ff4c3b;
+  }
+  .content h4 {
+    position: absolute;
+    font-size: 22px;
+    top: -200px;
+    left: 100px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
 
-    @media screen and (max-width:767px) 
-    {
-        .content h2{
-            font-size: 18px;
-            top:-122px;
-            left: 41px;
-        }
-        .content h4{
-            position: absolute;
-            font-size: 12px;
-            top: -102px;
-            left: 41px;
-            text-transform: uppercase;
-            color: #000000;
-        }
-    }
+@media screen and (max-width: 767px) {
+  .content h2 {
+    font-size: 18px;
+    top: -122px;
+    left: 41px;
+  }
+  .content h4 {
+    position: absolute;
+    font-size: 12px;
+    top: -102px;
+    left: 41px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
+
+/* Add styles for the arrows */
+.slider-banner .slick-prev,
+.slider-banner .slick-next {
+  font-size: 20px; /* Adjust the arrow size */
+  /* color: #ff0000; */
+  background: transparent;
+  z-index: 1;
+}
+
+.slider-banner .slick-prev {
+  left: 10px; /* Adjust the left position of the left arrow */
+}
+
+.slider-banner .slick-next {
+  right: 10px; /* Adjust the right position of the right arrow */
+}

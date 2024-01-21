@@ -1,36 +1,35 @@
-.banner{
-    width:100%;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 30px;
+.banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30px;
 }
 
- .bannerimg  {
-    /* width: 100%; */
-    transition: 0.5s all ease-in-out;
+.bannerimg {
+  /* width: 100%; */
+  transition: 0.5s all ease-in-out;
 }
-   .bannerimg:hover {
-    transform: scale(1.06);
-}
-
-.banner .bannertext{
-    position:absolute;
-    top:70px;
-    left: 300px;
+.bannerimg:hover {
+  transform: scale(1.06);
 }
 
-@media screen and (max-width:992px){
-    .banner .bannertext {
-        position: absolute;
-        top: 96px;
-        left: 400px;
-    }
+.banner .bannertext {
+  position: absolute;
+  top: 20%;
+  right: 5%;
 }
-@media screen and (max-width:767px){
-    .banner .bannertext {
-        position: absolute;
-        top: 22px;
-        left: 105px;
-    }
 
+/* @media screen and (max-width: 992px) {
+  .banner .bannertext {
+    position: absolute;
+    top: 96px;
+    left: 400px;
+  }
 }
+@media screen and (max-width: 767px) {
+  .banner .bannertext {
+    position: absolute;
+    top: 22px;
+    left: 105px;
+  }
+} */
