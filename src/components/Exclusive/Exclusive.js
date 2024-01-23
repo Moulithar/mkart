@@ -423,11 +423,9 @@ const Exclusive = () => {
             <Col xs={12}>
               <Nav
                 variant="pills"
-                className="d-flex justify-content-center"
+                className="d-flex justify-content-center flex-wrap"
                 style={{
-                  overflowX: "auto",
                   whiteSpace: "nowrap",
-                  flexWrap: "nowrap",
                 }}
               >
                 {tabsData.map(tab => (
