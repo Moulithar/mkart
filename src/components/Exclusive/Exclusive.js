@@ -16,6 +16,7 @@ import fashion8 from "./assets/styles/40.jpg"
 import "./assets/styles/index.css"
 import styled, { keyframes } from "styled-components"
 import { Nav, Tab } from "react-bootstrap"
+import StarRatings from "../StarRatings/StarRatings"
 
 const fadeIn = keyframes`
   from {
@@ -31,7 +32,6 @@ to {
 const StyledCol = styled(Col)`
   position: relative;
   transition: all ease 0.8s;
-
   &:hover {
     .hover-icons > div {
       animation: ${fadeIn} 0.5s ease forwards;
@@ -53,7 +53,7 @@ const StyledCol = styled(Col)`
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    bottom: 2%;
+    bottom: 20%;
     right: 7%;
     transition: all ease 0.8s;
 
@@ -157,180 +157,254 @@ const Exclusive = () => {
   ]
   const data2 = [
     {
-      img: fashion1,
-      cost: "145.00",
-      starRating: "5",
-      discount: "87.00",
-      name: "Trim Dress",
-      new: true,
-      onSale: true,
-    },
-    {
-      img: fashion2,
-      cost: "120.00",
-      starRating: "3.5",
-      discount: "60.00",
-      name: "Belted Top",
-      new: false,
-      onSale: true,
-    },
-    {
-      img: fashion3,
-      cost: "90.00",
+      img: fashion7,
+      cost: "130.00",
       starRating: "4",
-      discount: "45.00",
-      name: "V-neck Dress",
-      new: true,
-      onSale: false,
-    },
-    {
-      img: fashion4,
-      cost: "200.00",
-      starRating: "3",
-      discount: "30.00",
-      name: "Maxi Dress",
+      discount: "50.00",
+      name: "Printed Blouse",
       new: true,
       onSale: false,
     },
     {
       img: fashion5,
-      cost: "75.00",
-      starRating: "4.5",
-      discount: "15.00",
-      name: "Fit-flare Dress",
-      new: true,
-      onSale: true,
-    },
-    {
-      img: fashion6,
-      cost: "180.00",
+      cost: "110.00",
       starRating: "3.5",
-      discount: "90.00",
-      name: "Midi Dress",
+      discount: "55.00",
+      name: "Denim Jacket",
       new: false,
       onSale: true,
     },
     {
-      img: fashion7,
+      img: fashion3,
       cost: "95.00",
+      starRating: "4.5",
+      discount: "20.00",
+      name: "Floral Skirt",
+      new: true,
+      onSale: true,
+    },
+    {
+      img: fashion1,
+      cost: "180.00",
+      starRating: "5",
+      discount: "90.00",
+      name: "Striped Trousers",
+      new: false,
+      onSale: false,
+    },
+    {
+      img: fashion4,
+      cost: "70.00",
       starRating: "4",
-      discount: "19.00",
-      name: "Tulip Dress",
+      discount: "15.00",
+      name: "Leather Boots",
       new: true,
       onSale: false,
     },
     {
-      img: fashion8,
-      cost: "150.00",
-      starRating: "5",
-      discount: "75.00",
-      name: "Skater Dress",
+      img: fashion6,
+      cost: "160.00",
+      starRating: "3",
+      discount: "40.00",
+      name: "Sunglasses",
+      new: true,
+      onSale: true,
+    },
+    {
+      img: fashion2,
+      cost: "85.00",
+      starRating: "4.5",
+      discount: "30.00",
+      name: "Casual Hat",
       new: false,
+      onSale: false,
+    },
+    {
+      img: fashion8,
+      cost: "145.00",
+      starRating: "5",
+      discount: "72.00",
+      name: "Backpack",
+      new: true,
       onSale: true,
     },
   ]
   const data3 = [
     {
+      img: fashion3,
+      cost: "130.00",
+      starRating: "4",
+      discount: "50.00",
+      name: "Sporty Sneakers",
+      new: true,
+      onSale: false,
+    },
+    {
+      img: fashion2,
+      cost: "110.00",
+      starRating: "3.5",
+      discount: "55.00",
+      name: "Running Shorts",
+      new: false,
+      onSale: true,
+    },
+    {
       img: fashion1,
-      cost: "145.00",
-      starRating: "5",
-      discount: "87.00",
-      name: "Trim Dress",
+      cost: "95.00",
+      starRating: "4.5",
+      discount: "20.00",
+      name: "Hooded Sweatshirt",
       new: true,
       onSale: true,
     },
     {
-      img: fashion2,
-      cost: "120.00",
+      img: fashion4,
+      cost: "180.00",
+      starRating: "5",
+      discount: "90.00",
+      name: "Yoga Leggings",
+      new: false,
+      onSale: false,
+    },
+    {
+      img: fashion6,
+      cost: "70.00",
+      starRating: "4",
+      discount: "15.00",
+      name: "Gym Duffel Bag",
+      new: true,
+      onSale: false,
+    },
+    {
+      img: fashion7,
+      cost: "160.00",
+      starRating: "3",
+      discount: "40.00",
+      name: "Water Bottle",
+      new: true,
+      onSale: true,
+    },
+    {
+      img: fashion5,
+      cost: "85.00",
+      starRating: "4.5",
+      discount: "30.00",
+      name: "Fitness Tracker",
+      new: false,
+      onSale: false,
+    },
+    {
+      img: fashion8,
+      cost: "145.00",
+      starRating: "5",
+      discount: "72.00",
+      name: "Training Gloves",
+      new: true,
+      onSale: true,
+    },
+  ]
+  const data4 = [
+    {
+      img: fashion8,
+      cost: "130.00",
+      starRating: "4",
+      discount: "50.00",
+      name: "Floral Dress",
+      new: true,
+      onSale: false,
+    },
+    {
+      img: fashion6,
+      cost: "110.00",
       starRating: "3.5",
-      discount: "60.00",
-      name: "Belted Top",
+      discount: "55.00",
+      name: "Summer Dress",
       new: false,
       onSale: true,
     },
     {
       img: fashion3,
-      cost: "90.00",
-      starRating: "4",
-      discount: "45.00",
-      name: "V-neck Dress",
+      cost: "95.00",
+      starRating: "4.5",
+      discount: "20.00",
+      name: "A-line Dress",
       new: true,
-      onSale: false,
+      onSale: true,
     },
     {
-      img: fashion4,
-      cost: "200.00",
-      starRating: "3",
-      discount: "30.00",
-      name: "Maxi Dress",
-      new: true,
+      img: fashion1,
+      cost: "180.00",
+      starRating: "5",
+      discount: "90.00",
+      name: "Cocktail Dress",
+      new: false,
       onSale: false,
     },
     {
       img: fashion5,
-      cost: "75.00",
-      starRating: "4.5",
-      discount: "15.00",
-      name: "Fit-flare Dress",
-      new: true,
-      onSale: true,
-    },
-    {
-      img: fashion6,
-      cost: "180.00",
-      starRating: "3.5",
-      discount: "90.00",
-      name: "Midi Dress",
-      new: false,
-      onSale: true,
-    },
-    {
-      img: fashion7,
-      cost: "95.00",
+      cost: "70.00",
       starRating: "4",
-      discount: "19.00",
-      name: "Tulip Dress",
+      discount: "15.00",
+      name: "Printed Dress",
       new: true,
       onSale: false,
     },
     {
-      img: fashion8,
-      cost: "150.00",
-      starRating: "5",
-      discount: "75.00",
-      name: "Skater Dress",
+      img: fashion7,
+      cost: "160.00",
+      starRating: "3",
+      discount: "40.00",
+      name: "Ruffle Dress",
+      new: true,
+      onSale: true,
+    },
+    {
+      img: fashion2,
+      cost: "85.00",
+      starRating: "4.5",
+      discount: "30.00",
+      name: "Wrap Dress",
       new: false,
+      onSale: false,
+    },
+    {
+      img: fashion4,
+      cost: "145.00",
+      starRating: "5",
+      discount: "72.00",
+      name: "Sleeveless Dress",
+      new: true,
       onSale: true,
     },
   ]
 
-  const [arrayContent, setArrayContent] = useState(1)
-  const showContent1 = () => {
-    setArrayContent(1)
-  }
-  const showContent2 = () => {
-    setArrayContent(2)
-  }
-  const showContent3 = () => {
-    setArrayContent(3)
-  }
-
-  const navsTabs = [
+  const tabsData = [
     {
-      id: 1,
-      label: "best seller",
-      contentArray: data1,
-      onClick: showContent1,
+      key: "first",
+      label: "Best Seller",
+      content: data1,
     },
     {
-      id: 2,
-      label: "feautrued products",
-      contentArray: data2,
-      onClick: showContent2,
+      key: "second",
+      label: "Featured products",
+      content: data2,
     },
-    { id: 3, label: "on sale", contentArray: data3, onClick: showContent3 },
+    {
+      key: "third",
+      label: "New arrival",
+      content: data3,
+    },
+    {
+      key: "fourth",
+      label: "On sale",
+      content: data4,
+    },
   ]
+  const [activeTab, setActiveTab] = useState(tabsData[0].key)
 
+  const handleTabSelect = selectedKey => {
+    setActiveTab(selectedKey)
+  }
   return (
     <Container className="">
       <Row>
@@ -340,87 +414,103 @@ const Exclusive = () => {
           </span>
           <h3>SPECIAL PRODUCTS</h3>
         </div>
-        <div className="">
-          {navsTabs.map((data, index) => (
-            <>
-              <div className="text-uppercase d-flex  justify-content-center gap-5">
-                <p
-                  style={{
-                    color: "#FF5141",
-                  }}
-                  onClick={data?.onClick}
-                >
-                  {data?.label}
-                </p>
-              </div>
-              <div className="row">
-                {arrayContent === data.id && (
-                  <>
-                    {data?.contentArray.map((data, index) => (
-                      <StyledCol lg={3} key={index} className="g-4">
-                        <div className="excluisve cursor-pointer position-relative">
-                          {data?.new && (
-                            <div
-                              className="rounded-circle d-flex align-items-center justify-content-center position-absolute"
-                              style={{
-                                backgroundColor: "#FF5141",
-                                padding: "9px 4px",
-                                top: "7px",
-                                left: "7px",
-                                fontWeight: "700",
-                              }}
-                            >
-                              <p
-                                className="text-white"
-                                style={{ fontSize: "13px" }}
-                              >
-                                NEW
-                              </p>
-                            </div>
-                          )}
-                          {data?.onSale && (
-                            <StyledVerticalText className="text-uppercase">
-                              on &nbsp;sale
-                            </StyledVerticalText>
-                          )}
-                          <img src={data?.img} className="img-fluid" alt="" />
-                        </div>
-                        <p>{data?.name}</p>
-
-                        <div className="d-flex gap-2">
-                          <p
-                            className="text-black"
-                            style={{ fontWeight: "1000" }}
+        <Tab.Container
+          id="my-tabs"
+          defaultActiveKey={activeTab}
+          onSelect={handleTabSelect}
+        >
+          <Row>
+            <Col xs={12}>
+              <Nav variant="pills" className="d-flex justify-content-center">
+                {tabsData.map(tab => (
+                  <Nav.Item
+                    key={tab.key}
+                    style={{ width: "20%" }}
+                    className="d-flex justify-content-center"
+                  >
+                    <Nav.Link
+                      eventKey={tab.key}
+                      style={{
+                        backgroundColor: "transparent",
+                        color: activeTab === tab.key ? "#FF5141" : "#000",
+                      }}
+                    >
+                      {tab.label}
+                    </Nav.Link>
+                  </Nav.Item>
+                ))}
+              </Nav>
+            </Col>
+          </Row>
+          <Tab.Content>
+            {tabsData.map(tab => (
+              <Tab.Pane key={tab.key} eventKey={tab.key} className="">
+                <Row>
+                  {tab.content.map((data, index) => (
+                    <StyledCol lg={3} key={index} className="g-4">
+                      <div className="excluisve cursor-pointer position-relative">
+                        {data?.new && (
+                          <div
+                            className="rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                            style={{
+                              backgroundColor: "#FF5141",
+                              padding: "9px 4px",
+                              top: "7px",
+                              left: "7px",
+                              fontWeight: "700",
+                            }}
                           >
-                            ${data?.discount}
-                          </p>
-                          <p>
-                            {" "}
-                            <s>${data?.cost}</s>
-                          </p>
+                            <p
+                              className="text-white"
+                              style={{ fontSize: "13px" }}
+                            >
+                              NEW
+                            </p>
+                          </div>
+                        )}
+                        {data?.onSale && (
+                          <StyledVerticalText className="text-uppercase">
+                            on &nbsp;sale
+                          </StyledVerticalText>
+                        )}
+                        <img src={data?.img} className="img-fluid" alt="" />
+                      </div>
+                      <StarRatings value={data?.starRating}></StarRatings>
+                      <p>{data?.name}</p>
+
+                      <div className="d-flex gap-2">
+                        <p
+                          className="text-black"
+                          style={{ fontWeight: "1000" }}
+                        >
+                          ${data?.discount}
+                        </p>
+                        <p>
+                          {" "}
+                          <s>${data?.cost}</s>
+                        </p>
+                      </div>
+                      <div className="hover-icons">
+                        <div>
+                          <i className="icons bi bi-telephone-fill"> </i>
                         </div>
-                        <div className="hover-icons">
-                          <div>
-                            <i className="icons bi bi-telephone-fill"> </i>
-                          </div>
-                          <div>
-                            <i className="icons bi bi-cart-fill"> </i>
-                          </div>
-                          <div>
-                            <i className="icons bi bi-heart-fill"> </i>
-                          </div>
-                          <div>
-                            <i className="icons bi bi-search"> </i>
-                          </div>
+                        <div>
+                          <i className="icons bi bi-cart-fill"> </i>
                         </div>
-                      </StyledCol>
-                    ))}
-                  </>
-                )}
-              </div>
-            </>
-          ))}
-        </div>
+                        <div>
+                          <i className="icons bi bi-heart-fill"> </i>
+                        </div>
+                        <div>
+                          <i className="icons bi bi-search"> </i>
+                        </div>
+                      </div>
+                    </StyledCol>
+                  ))}
+                </Row>
+              </Tab.Pane>
+            ))}
+          </Tab.Content>
+        </Tab.Container>
       </Row>
     </Container>
   )
