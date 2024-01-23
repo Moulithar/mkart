@@ -421,11 +421,19 @@ const Exclusive = () => {
         >
           <Row>
             <Col xs={12}>
-              <Nav variant="pills" className="d-flex justify-content-center">
+              <Nav
+                variant="pills"
+                className="d-flex justify-content-center"
+                style={{
+                  overflowX: "auto",
+                  whiteSpace: "nowrap",
+                  flexWrap: "nowrap",
+                }}
+              >
                 {tabsData.map(tab => (
                   <Nav.Item
                     key={tab.key}
-                    style={{ width: "20%" }}
+                    style={{ width: "max-content" }}
                     className="d-flex justify-content-center"
                   >
                     <Nav.Link
