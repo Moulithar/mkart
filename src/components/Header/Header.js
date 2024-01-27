@@ -10,13 +10,60 @@ import logo from "./assets/images/logo.png"
 import "./assets/styles/index.css"
 import { Offcanvas } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons"
+import {
+  faArrowAltCircleRight,
+  faArrowCircleRight,
+  faArrowDown,
+  faArrowUp,
+  faBars,
+  faCableCar,
+  faChevronDown,
+  faChevronRight,
+  faChevronUp,
+  faHamburger,
+} from "@fortawesome/free-solid-svg-icons"
 
 const Header = () => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+
+  const data = [
+    { id: 1, name: "Home" },
+    {
+      id: 2,
+      name: "Shop",
+      dropDownContent: [
+        { id: 21, name: "swhhb" },
+        { id: 22, name: "qwuyqigwdi" },
+        { id: 23, name: "sknvfwh" },
+      ],
+    },
+    {
+      id: 3,
+      name: "Products",
+      dropDownContent: [
+        { id: 31, name: "sbkubv" },
+        { id: 32, name: "sbksdvs dvswfubv" },
+        { id: 33, name: "sdvsd" },
+      ],
+    },
+    {
+      id: 4,
+      name: "Features",
+    },
+    { id: 5, name: "Blogs" },
+    // Add more items as needed
+  ]
+
+  // State to manage dropdown visibility
+  const [openDropdown, setOpenDropdown] = useState(null)
+
+  // Function to toggle dropdown visibility
+  const toggleDropdown = id => {
+    setOpenDropdown(openDropdown === id ? null : id)
+  }
   return (
     <>
       <div className="header-top ">
@@ -159,77 +206,46 @@ const Header = () => {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="text-capitalize">
-              <Nav.Link className="navitems" href="#action2">
-                <div className="dropdown">
-                  <button className="dropbtn">HOME</button>
-                </div>
-              </Nav.Link>
-              <hr />
-              <Nav.Link className="navitems" href="#action2">
-                <div className="dropdown">
-                  <button className="dropbtn">shop</button>
-                  <div className="dropdown-content">
-                    <ul>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          women
-                        </a>
-                      </li>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          clothing
-                        </a>
-                      </li>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          accesories
-                        </a>
-                      </li>
-                    </ul>
+              {data.map((item, index) => (
+                <>
+                  <div key={item.id} className="d-flex justify-content-between">
+                    <div>{item.name}</div>
+                    <div
+                      style={{
+                        cursor: "pointer",
+                        color: "#ff5141",
+                        transition: "transform ease 0.3s",
+                        transform:
+                          openDropdown === item.id
+                            ? "rotate(90deg)"
+                            : "rotate(0deg)",
+                      }}
+                      onClick={() => toggleDropdown(item.id)}
+                    >
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </div>
                   </div>
-                </div>
-              </Nav.Link>
-              <Nav.Link className="navitems" href="#action2">
-                <div className="dropdown">
-                  <button className="dropbtn">products</button>
-                  <div className="dropdown-content">
-                    <ul>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          women
-                        </a>
-                      </li>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          clothing
-                        </a>
-                      </li>
-                      <li>
-                        <a className="fromleft" href="">
-                          {" "}
-                          accesories
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </Nav.Link>
-              <Nav.Link className="navitems" href="#action2">
-                <div className="dropdown">
-                  <button className="dropbtn">Features</button>
-                </div>
-              </Nav.Link>
-
-              <Nav.Link className="navitems" href="#action2">
-                <div className="dropdown">
-                  <button className="dropbtn">blogs</button>
-                </div>
-              </Nav.Link>
+                  {}
+                  {index < data.length - 1 && <hr />}
+                  {item?.dropDownContent && openDropdown === item.id && (
+                    <div style={{}}>
+                      {item?.dropDownContent.map((data, index) => (
+                        <div
+                          style={{
+                            backgroundColor: "",
+                            color: "#000",
+                          }}
+                          className="d-flex justify-content-between"
+                          key={data.id}
+                        >
+                          {data?.name}
+                        </div>
+                      ))}
+                      {!index < data.length - 1 && <hr />}
+                    </div>
+                  )}
+                </>
+              ))}
             </Offcanvas.Body>
           </Offcanvas>
         </Container>
