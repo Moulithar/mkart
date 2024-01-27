@@ -164,6 +164,7 @@ const Header = () => {
                   <button className="dropbtn">HOME</button>
                 </div>
               </Nav.Link>
+              <hr />
               <Nav.Link className="navitems" href="#action2">
                 <div className="dropdown">
                   <button className="dropbtn">shop</button>
@@ -220,7 +221,7 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link className="navitems" href="#action2">
                 <div className="dropdown">
-                  <button className="dropbtn">features</button>
+                  <button className="dropbtn">Features</button>
                 </div>
               </Nav.Link>
 
