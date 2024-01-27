@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -8,8 +8,15 @@ import Navbar from "react-bootstrap/Navbar"
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from "./assets/images/logo.png"
 import "./assets/styles/index.css"
+import { Offcanvas } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons"
 
 const Header = () => {
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
   return (
     <>
       <div className="header-top ">
@@ -36,15 +43,16 @@ const Header = () => {
         </Container>
       </div>
 
-      <div className="header-bottom">
+      <div className="header-bottom ">
         <Container>
           <Navbar expand="lg" className="navbar">
             <Container fluid>
               <Navbar.Brand href="#">
                 <img src={logo} className="logo" alt="" />
               </Navbar.Brand>
-              <Navbar.Toggle aria-controls="navbarScroll" />
-              <Navbar.Collapse id="navbarScroll">
+              {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
+
+              <Navbar.Collapse id="navbarScroll ">
                 <Nav
                   className="me-auto my-2 my-lg-0"
                   style={{ maxHeight: "100px" }}
@@ -131,8 +139,98 @@ const Header = () => {
             <Button variant="outline-success">Search</Button>
           </Form> */}
               </Navbar.Collapse>
+              <div
+                variant=""
+                onClick={handleShow}
+                className="d-lg-none d-block"
+                style={{ cursor: "pointer" }}
+              >
+                <FontAwesomeIcon icon={faBars} size="2x" />
+              </div>
             </Container>
           </Navbar>
+
+          <Offcanvas show={show} onHide={handleClose} placement="end">
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>
+                <Navbar.Brand href="#">
+                  <img src={logo} className="logo" alt="" />
+                </Navbar.Brand>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="text-capitalize">
+              <Nav.Link className="navitems" href="#action2">
+                <div className="dropdown">
+                  <button className="dropbtn">HOME</button>
+                </div>
+              </Nav.Link>
+              <Nav.Link className="navitems" href="#action2">
+                <div className="dropdown">
+                  <button className="dropbtn">shop</button>
+                  <div className="dropdown-content">
+                    <ul>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          women
+                        </a>
+                      </li>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          clothing
+                        </a>
+                      </li>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          accesories
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Nav.Link>
+              <Nav.Link className="navitems" href="#action2">
+                <div className="dropdown">
+                  <button className="dropbtn">products</button>
+                  <div className="dropdown-content">
+                    <ul>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          women
+                        </a>
+                      </li>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          clothing
+                        </a>
+                      </li>
+                      <li>
+                        <a className="fromleft" href="">
+                          {" "}
+                          accesories
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Nav.Link>
+              <Nav.Link className="navitems" href="#action2">
+                <div className="dropdown">
+                  <button className="dropbtn">features</button>
+                </div>
+              </Nav.Link>
+
+              <Nav.Link className="navitems" href="#action2">
+                <div className="dropdown">
+                  <button className="dropbtn">blogs</button>
+                </div>
+              </Nav.Link>
+            </Offcanvas.Body>
+          </Offcanvas>
         </Container>
       </div>
     </>

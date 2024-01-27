@@ -21,9 +21,9 @@ const Mainfooter = () => {
             <div className="border-right"></div>
           </Col>
           <Col lg={6}>
-            <Form className="d-flex gap-2 justify-content-lg-end justify-content-md-start">
+            <Form className="d-flex gap-2 justify-content-lg-end justify-content-md-start w-100 px-lg-5 px-0">
               <Form.Control
-                className="formcontrol"
+                className="formcontrol w-100"
                 type="name"
                 placeholder="Enter your email"
                 aria-label="Search"

@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 require("dotenv").config({
-  path: '.env',
+  path: ".env",
 })
 module.exports = {
   siteMetadata: {
@@ -39,7 +39,19 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.ico`,
+        icons: [
+          {
+            src: `favicons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+        ],
       },
     },
   ],

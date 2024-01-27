@@ -12,6 +12,8 @@ import $ from "jquery"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "./assets/styles/index.css"
 import "../components/Style/icon.css"
+import Marquee from "../components/Marquee/Marquee"
+import Fashion from "../components/Fashion/Fashion"
 
 const IndexPage = () => {
   return (
@@ -20,6 +22,8 @@ const IndexPage = () => {
       <Owl />
       <Banner />
       <Exclusive />
+      <Fashion />
+      <Marquee />
       <Offer />
       <Special />
       <Mainfooter />

@@ -112,7 +112,7 @@ const Exclusive = () => {
     {
       img: fashion4,
       cost: "200.00",
-      starRating: "3",
+      starRating: "0.5",
       discount: "30.00",
       name: "Maxi Dress",
       new: true,
@@ -121,7 +121,7 @@ const Exclusive = () => {
     {
       img: fashion5,
       cost: "75.00",
-      starRating: "4.5",
+      starRating: "2",
       discount: "15.00",
       name: "Fit-flare Dress",
       new: true,
@@ -130,7 +130,7 @@ const Exclusive = () => {
     {
       img: fashion6,
       cost: "180.00",
-      starRating: "3.5",
+      starRating: "4",
       discount: "90.00",
       name: "Midi Dress",
       new: false,
@@ -453,7 +453,7 @@ const Exclusive = () => {
               <Tab.Pane key={tab.key} eventKey={tab.key} className="">
                 <Row>
                   {tab.content.map((data, index) => (
-                    <StyledCol lg={3} key={index} className="g-4">
+                    <StyledCol lg={3} xs={6} key={index} className="g-4">
                       <div className="excluisve cursor-pointer position-relative">
                         {data?.new && (
                           <div

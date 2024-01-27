@@ -1,0 +1,8 @@
+.mkart-slider div.show {
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.mkart-slider:hover div.show {
+  opacity: 1;
+}
