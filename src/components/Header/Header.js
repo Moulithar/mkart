@@ -210,20 +210,22 @@ const Header = () => {
                 <>
                   <div key={item.id} className="d-flex justify-content-between">
                     <div>{item.name}</div>
-                    <div
-                      style={{
-                        cursor: "pointer",
-                        color: "#ff5141",
-                        transition: "transform ease 0.3s",
-                        transform:
-                          openDropdown === item.id
-                            ? "rotate(90deg)"
-                            : "rotate(0deg)",
-                      }}
-                      onClick={() => toggleDropdown(item.id)}
-                    >
-                      <FontAwesomeIcon icon={faChevronRight} />
-                    </div>
+                    {item.dropDownContent && (
+                      <div
+                        style={{
+                          cursor: "pointer",
+                          color: "#ff5141",
+                          transition: "transform ease 0.3s",
+                          transform:
+                            openDropdown === item.id
+                              ? "rotate(90deg)"
+                              : "rotate(0deg)",
+                        }}
+                        onClick={() => toggleDropdown(item.id)}
+                      >
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </div>
+                    )}
                   </div>
                   {}
                   {index < data.length - 1 && <hr />}
