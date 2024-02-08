@@ -71,7 +71,7 @@ const StyledCol = styled(Col)`
 
     &:hover > div {
       animation: none; // Reset animation on hover
-      animation-play-state: running;
+      /* animation-play-state: running; */
     }
   }
 `
