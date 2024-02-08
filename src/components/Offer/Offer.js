@@ -18,7 +18,7 @@ const Offer = () => {
 
           <p className="text-center mb-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            industry. yeah also abigail been sandwiched.
             <br />
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s,
