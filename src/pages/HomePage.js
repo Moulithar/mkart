@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import "../components/Style/global.css"
 import Header from "../components/Header/Header"
 import Owl from "../components/Owl/Owl"
@@ -14,14 +14,22 @@ import "./assets/styles/index.css"
 import "../components/Style/icon.css"
 import Marquee from "../components/Marquee/Marquee"
 import Fashion from "../components/Fashion/Fashion"
-import HomePage from "./HomePage"
 
-const IndexPage = () => {
+const HomePage = () => {
   return (
     <>
-      <HomePage />
+      <Header />
+      <Owl />
+      <Banner />
+      <Exclusive />
+      <Fashion />
+      <Marquee />
+      <Offer />
+      <Special />
+      <Mainfooter />
+      <Bottomfooter />
     </>
   )
 }
 
-export default IndexPage
+export default HomePage

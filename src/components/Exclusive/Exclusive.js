@@ -32,27 +32,39 @@ to {
 const StyledCol = styled(Col)`
   position: relative;
   transition: all ease 0.8s;
+  .hover-icons > div {
+    visibility: hidden;
+    opacity: 0;
+  }
   &:hover {
     .hover-icons > div {
       animation: ${fadeIn} 0.5s ease forwards;
       &:nth-child(1) {
         animation-delay: 0.2s;
+        visibility: visible;
+        opacity: 1;
       }
       &:nth-child(2) {
         animation-delay: 0.4s;
+        visibility: visible;
+        opacity: 1;
       }
       &:nth-child(3) {
         animation-delay: 0.6s;
+        visibility: visible;
+        opacity: 1;
       }
       &:nth-child(4) {
         animation-delay: 0.8s;
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
   .hover-icons {
     position: absolute;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     bottom: 20%;
     right: 7%;
     transition: all ease 0.8s;
@@ -60,14 +72,6 @@ const StyledCol = styled(Col)`
     &:hover > div {
       animation: none; // Reset animation on hover
       animation-play-state: running;
-    }
-  }
-
-  &:hover {
-    .hover-icons {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
     }
   }
 `
