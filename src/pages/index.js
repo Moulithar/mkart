@@ -15,11 +15,16 @@ import "../components/Style/icon.css"
 import Marquee from "../components/Marquee/Marquee"
 import Fashion from "../components/Fashion/Fashion"
 import HomePage from "./HomePage"
+import AboutPage from "./AboutPage"
 
 const IndexPage = () => {
   return (
     <>
+      <Header />
       <HomePage />
+      <AboutPage />
+      <Mainfooter />
+      <Bottomfooter />
     </>
   )
 }

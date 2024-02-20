@@ -79,6 +79,7 @@ a:after {
   transition: transform 250ms ease-in-out;
   /* width: max-content; */
 }
+
 a:hover {
   color: #878787;
 }

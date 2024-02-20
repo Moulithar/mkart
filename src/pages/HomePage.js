@@ -18,7 +18,6 @@ import Fashion from "../components/Fashion/Fashion"
 const HomePage = () => {
   return (
     <>
-      <Header />
       <Owl />
       <Banner />
       <Exclusive />
@@ -26,8 +25,6 @@ const HomePage = () => {
       <Marquee />
       <Offer />
       <Special />
-      <Mainfooter />
-      <Bottomfooter />
     </>
   )
 }
