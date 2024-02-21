@@ -22,6 +22,7 @@ import {
   faChevronUp,
   faHamburger,
 } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 
 const Header = () => {
   const [show, setShow] = useState(false)
@@ -105,11 +106,13 @@ const Header = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 ></Nav>
-                <Nav.Link className="navitems" href="#action2">
-                  <div className="dropdown">
-                    <button className="dropbtn">HOME</button>
-                  </div>
-                </Nav.Link>
+                <Link to="/homepage">
+                  <Nav.Link className="navitems" href="#action2">
+                    <div className="dropdown">
+                      <button className="dropbtn">HOME</button>
+                    </div>
+                  </Nav.Link>
+                </Link>
                 <Nav.Link className="navitems" href="#action2">
                   <div className="dropdown">
                     <button className="dropbtn">shop</button>
@@ -164,11 +167,14 @@ const Header = () => {
                     </div>
                   </div>
                 </Nav.Link>
-                <Nav.Link className="navitems" href="#action2">
-                  <div className="dropdown">
-                    <button className="dropbtn">features</button>
-                  </div>
-                </Nav.Link>
+                <Link to="/aboutpage">
+                  {" "}
+                  <Nav.Link className="navitems" href="#action2">
+                    <div className="dropdown">
+                      <button className="dropbtn">features</button>
+                    </div>
+                  </Nav.Link>
+                </Link>
 
                 <Nav.Link className="navitems" href="#action2">
                   <div className="dropdown">
