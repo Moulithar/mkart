@@ -22,7 +22,6 @@ const IndexPage = () => {
     <>
       <Header />
       <HomePage />
-      {/* <AboutPage /> */}
       <Mainfooter />
       <Bottomfooter />
     </>

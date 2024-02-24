@@ -4,7 +4,7 @@ import Mainfooter from "../components/Mainfooter/Mainfooter"
 import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
 import bannerimg from "../images/banner.jpg"
 
-const AboutPage = () => {
+const Blog = () => {
   return (
     <div>
       <Header />
@@ -23,7 +23,7 @@ const AboutPage = () => {
             placeItems: "center",
           }}
         >
-          <h3>About</h3>
+          <h3>Blog</h3>
 
           <p
             style={{
@@ -68,4 +68,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default Blog

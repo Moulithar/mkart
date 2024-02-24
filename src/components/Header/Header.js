@@ -31,30 +31,31 @@ const Header = () => {
   const handleShow = () => setShow(true)
 
   const data = [
-    { id: 1, name: "Home" },
+    { id: 1, name: "Home" , link: "/"},
     {
       id: 2,
       name: "Shop",
       dropDownContent: [
-        { id: 21, name: "swhhb" },
-        { id: 22, name: "qwuyqigwdi" },
-        { id: 23, name: "sknvfwh" },
+        { id: 21, name: "Location" },
+        { id: 22, name: "Brands Available" },
+        { id: 23, name: "Contact" },
       ],
     },
     {
       id: 3,
       name: "Products",
       dropDownContent: [
-        { id: 31, name: "sbkubv" },
-        { id: 32, name: "sbksdvs dvswfubv" },
-        { id: 33, name: "sdvsd" },
+        { id: 31, name: "Brands" },
+        { id: 32, name: "Contact" },
+        { id: 33, name: "Help" },
       ],
     },
     {
       id: 4,
       name: "Features",
+      link: "/AboutPage"
     },
-    { id: 5, name: "Blogs" },
+    { id: 5, name: "Blogs" , link:"/Blog"},
     // Add more items as needed
   ]
 
@@ -106,7 +107,7 @@ const Header = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 ></Nav>
-                <Link to="/homepage">
+                <Link to="/">
                   <Nav.Link className="navitems" href="#action2">
                     <div className="dropdown">
                       <button className="dropbtn">HOME</button>
@@ -114,7 +115,7 @@ const Header = () => {
                   </Nav.Link>
                 </Link>
                 <Nav.Link className="navitems" href="#action2">
-                  <div className="dropdown">
+                  <div className="dropdown ">
                     <button className="dropbtn">shop</button>
                     <div className="dropdown-content">
                       <ul>
@@ -136,7 +137,9 @@ const Header = () => {
                             accesories
                           </a>
                         </li>
+                   
                       </ul>
+                    
                     </div>
                   </div>
                 </Nav.Link>
@@ -167,7 +170,7 @@ const Header = () => {
                     </div>
                   </div>
                 </Nav.Link>
-                <Link to="/aboutpage">
+                <Link to="/AboutPage">
                   {" "}
                   <Nav.Link className="navitems" href="#action2">
                     <div className="dropdown">
@@ -175,12 +178,13 @@ const Header = () => {
                     </div>
                   </Nav.Link>
                 </Link>
-
+                <Link to="/Blog">
                 <Nav.Link className="navitems" href="#action2">
                   <div className="dropdown">
                     <button className="dropbtn">blogs</button>
                   </div>
                 </Nav.Link>
+                </Link>
 
                 {/* <Form className="d-flex">
             <Form.Control
@@ -215,7 +219,10 @@ const Header = () => {
               {data.map((item, index) => (
                 <>
                   <div key={item.id} className="d-flex justify-content-between">
+                    <Link to={item.link} className="text-decoration-none text-dark">
+
                     <div>{item.name}</div>
+                    </Link>
                     {item.dropDownContent && (
                       <div
                         style={{
