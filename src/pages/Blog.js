@@ -1,21 +1,26 @@
 import React from "react"
+import { Col, Row } from "react-bootstrap"
+import styled from "styled-components"
+import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
 import Header from "../components/Header/Header"
 import Mainfooter from "../components/Mainfooter/Mainfooter"
-import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
-import bannerimg from "../images/banner.jpg"
+import { blogData } from "./assets/data/BlogData"
+import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 
+const styledSeperator = styled.div`
+  height: 100px;
+  background-color: #777777;
+  width: 1px;
+  border: 2px solid green;
+`
 const Blog = () => {
   return (
     <div>
       <Header />
+      <BreadCrumb folder={"Blogs"} />
 
       <div
-        className="py-5 d-flex align-items-center justify-content-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(256, 256, 256, 0.5), rgba(256, 256, 256, 0.5)), url(${bannerimg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="py-5 container"
       >
         <div
           style={{
@@ -24,43 +29,36 @@ const Blog = () => {
           }}
         >
           <h3>Blog</h3>
-
-          <p
-            style={{
-              whiteSpace: "pre-line",
-              color: '#000'
-            }}
-          >
-            Donec vitae sapien ut libero venenatis faucibus. Nullam quis
-            ante.Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-            fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-            Sedconsequat, leo eget bibendum sodales, augue velit cursus nunc,
-            quisgravida magna mi a libero. Fusce vulputate eleifend sapien.
-            Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id,
-            metus. 
-            
-            <br />
-            <br />
-
-            Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem
-            in justo pellentesque facilisis. Etiam imperdiet imperdiet orci.
-            Nunc nec neque. 
-            <br />
-            <br />
-            Phasellus leo dolor, tempus non, auctor et,
-            hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non,
-            euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent
-            congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere
-            vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-            Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod
-            orci, ac placerat dolor lectus quis orci. 
-            
-            Phasellus consectetuer
-            vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac,
-            mattis non, nunc. 
-          </p>
         </div>
+        {/* <pre>{JSON.stringify(blogData, null, 2)}</pre> */}
+        {blogData.slice(-5).map((data, index) => {
+          return (
+            <Row key={index} className="g-5 py-5" >
+              <Col lg={6} className="">
+                <img src={data?.image} className="img-fluid" alt="" />
+              </Col>
+              <Col lg={6} className="d-flex align-items-center">
+                <div>
+
+          
+                <h6 className="text-orange">{data?.date}</h6>
+                <h4 className="mb-2">{data?.title}</h4>
+                <div className="d-flex align-items-center justify-content-start gap-3 mb-3">
+                  <p>posted by: {data?.postedby}</p>
+                  <styledSeperator />
+                  <i className="icons bi bi-heart-fill"> </i>
+                  <p className="cursor-pointer">{data?.likes.length} Hits</p>
+                  <styledSeperator />
+
+                  <i class="bi bi-chat"></i>
+                  <p>{data?.comments.length} Comments</p>
+                </div>
+                <p>{data?.description}</p>
+                </div>
+              </Col>
+            </Row>
+          )
+        })}
       </div>
       <Mainfooter />
       <Bottomfooter />

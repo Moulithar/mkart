@@ -1,16 +1,6 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
-import {
-  marquee1,
-  marquee2,
-  marquee3,
-  marquee4,
-  marquee5,
-  marquee6,
-  marquee7,
-  marquee8,
-} from "./assets/images/1.png"
 import Slider from "react-slick"
+import styled, { keyframes } from "styled-components"
 
 const data = [
   {
@@ -85,14 +75,6 @@ const ScrollImage = styled.img`
   }
 `
 
-const MarqueeWrapper = styled.div`
-  overflow: hidden;
-`
-const MarqueeContent = styled.div`
-  display: flex;
-  animation: ${scrollAnimation} 20s linear infinite; // Adjust the speed as needed
-  margin-left: -25px; // Adjust to match the margin used in ScrollImage
-`
 
 const Marquee = () => {
   var settings = {
@@ -102,20 +84,32 @@ const Marquee = () => {
     slidesToShow: 5,
     slidesToScroll: 2,
     arrows: false,
+    responsive: [
+      {
+       breakpoint: 1280,
+       settings:{
+         slidesToShow: 4,
+       }
+      },
+      {
+       breakpoint: 992,
+       settings:{
+         slidesToShow: 3,
+       }
+      },
+      {
+       breakpoint: 768,
+       settings:{
+         slidesToShow: 2,
+       }
+      },
+
+    ]
+    
   }
   return (
     <>
-      {/* <MarqueeWrapper className="my-5">
-        <MarqueeContent>
-          {data.map((data, index) => (
-            <ScrollImage
-              key={index}
-              src={`https://themes.pixelstrap.com/multikart/assets/images/logos/${data?.value}.png`}
-              alt={`Logo ${index}`}
-            />
-          ))}
-        </MarqueeContent>
-      </MarqueeWrapper> */}
+    
 
       <section className=" position-relative">
         <Slider {...settings}>

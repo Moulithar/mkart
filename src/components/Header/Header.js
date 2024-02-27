@@ -31,31 +31,31 @@ const Header = () => {
   const handleShow = () => setShow(true)
 
   const data = [
-    { id: 1, name: "Home" , link: "/"},
+    { id: 1, name: "Home", link: "/" },
     {
       id: 2,
-      name: "Shop",
-      dropDownContent: [
-        { id: 21, name: "Location" },
-        { id: 22, name: "Brands Available" },
-        { id: 23, name: "Contact" },
-      ],
+      name: "About",
+      link: "/AboutPage",
     },
     {
       id: 3,
-      name: "Products",
+      name: "Shop",
       dropDownContent: [
-        { id: 31, name: "Brands" },
-        { id: 32, name: "Contact" },
-        { id: 33, name: "Help" },
+        { id: 21, name: "Product" },
+        { id: 22, name: "Cart" },
+        { id: 23, name: "Contact" },
       ],
     },
     {
       id: 4,
       name: "Features",
-      link: "/AboutPage"
+      dropDownContent: [
+        { id: 31, name: "Search" },
+        { id: 32, name: "FAQ" },
+      ],
     },
-    { id: 5, name: "Blogs" , link:"/Blog"},
+
+    { id: 5, name: "Blogs", link: "/Blog" },
     // Add more items as needed
   ]
 
@@ -97,7 +97,15 @@ const Header = () => {
           <Navbar expand="lg" className="navbar">
             <Container fluid>
               <Navbar.Brand href="#">
-                <img src={logo} className="logo w-25" alt="" />
+                <img
+                  src={logo}
+                  className="logo"
+                  alt=""
+                  style={{
+                    width: "100px",
+                    height: "auto",
+                  }}
+                />
               </Navbar.Brand>
               {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
 
@@ -114,78 +122,69 @@ const Header = () => {
                     </div>
                   </Nav.Link>
                 </Link>
+                <Link to="/AboutPage">
+                  {" "}
+                  <Nav.Link className="navitems" href="#action2">
+                    <div className="dropdown">
+                      <button className="dropbtn">ABOUT</button>
+                    </div>
+                  </Nav.Link>
+                </Link>
                 <Nav.Link className="navitems" href="#action2">
                   <div className="dropdown ">
                     <button className="dropbtn">shop</button>
                     <div className="dropdown-content">
                       <ul>
-                         <li >
+                        <li>
                           <a className="fromleft" href="">
                             {" "}
-                  Location
+                            Products
                           </a>
                         </li>
-                         <li >
+                        <li>
                           <a className="fromleft" href="">
                             {" "}
-                        Brands Available
+                            Cart
                           </a>
                         </li>
-                         <li >
+                        <li>
                           <a className="fromleft" href="">
                             {" "}
-                            Contact
+                            Contact Us
                           </a>
                         </li>
-                   
                       </ul>
-                    
                     </div>
                   </div>
                 </Nav.Link>
                 <Nav.Link className="navitems" href="#action2">
                   <div className="dropdown">
-                    <button className="dropbtn">products</button>
+                    <button className="dropbtn">features</button>
                     <div className="dropdown-content">
                       <ul>
                         <li>
                           <a className="fromleft" href="">
                             {" "}
-                            Brands
-
+                            Search
                           </a>
                         </li>
                         <li>
                           <a className="fromleft" href="">
                             {" "}
-                            Contact
-
-                          </a>
-                        </li>
-                        <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            Help
+                            FAQ
                           </a>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </Nav.Link>
-                <Link to="/AboutPage">
-                  {" "}
+
+                <Link to="/Blog">
                   <Nav.Link className="navitems" href="#action2">
                     <div className="dropdown">
-                      <button className="dropbtn">features</button>
+                      <button className="dropbtn">blogs</button>
                     </div>
                   </Nav.Link>
-                </Link>
-                <Link to="/Blog">
-                <Nav.Link className="navitems" href="#action2">
-                  <div className="dropdown">
-                    <button className="dropbtn">blogs</button>
-                  </div>
-                </Nav.Link>
                 </Link>
 
                 {/* <Form className="d-flex">
@@ -213,7 +212,14 @@ const Header = () => {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 <Navbar.Brand href="#">
-                  <img src={logo} className="logo" alt="" />
+                  <img
+                    src={logo}
+                    className="logo h-auto"
+                    alt=""
+                    style={{
+                      width: "100px",
+                    }}
+                  />
                 </Navbar.Brand>
               </Offcanvas.Title>
             </Offcanvas.Header>
@@ -221,9 +227,11 @@ const Header = () => {
               {data.map((item, index) => (
                 <>
                   <div key={item.id} className="d-flex justify-content-between">
-                    <Link to={item.link} className="text-decoration-none text-dark">
-
-                    <div>{item.name}</div>
+                    <Link
+                      to={item.link}
+                      className="text-decoration-none text-dark"
+                    >
+                      <div>{item.name}</div>
                     </Link>
                     {item.dropDownContent && (
                       <div
@@ -245,23 +253,26 @@ const Header = () => {
                   {}
                   {index < data.length - 1 && <hr />}
                   {item?.dropDownContent && openDropdown === item.id && (
-                    <div style={{}}>
-                      {item?.dropDownContent.map((data, index) => (
+                    <div>
+                      {item?.dropDownContent.map((data, index, array) => (
                         <div
                           style={{
                             backgroundColor: "",
                             color: "#000",
-                            borderBottom: index -2 ? "1px solid #e6e6e6" : "",
-                            padding: "5px"
-
+                            borderBottom:
+                              index < item?.dropDownContent.length - 1
+                                ? "1px solid #e6e6e6"
+                                : "",
+                            padding: "5px",
                           }}
                           className="d-flex justify-content-between"
                           key={data.id}
                         >
+                   
+                          {data?.index}
                           {data?.name}
                         </div>
                       ))}
-                      {!index < data.length - 1 && <hr />}
                     </div>
                   )}
                 </>
