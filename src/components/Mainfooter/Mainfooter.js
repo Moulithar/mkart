@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import logo from "./assets/styles/logo.png";
 import "./assets/styles/index.css";
+import MkBtn from "../MkBtn/MkBtn";
 
 const Mainfooter = () => {
 
@@ -26,6 +27,7 @@ const Mainfooter = () => {
 
   const onSubmit = (data) => {
     console.log(data.email);
+    return;
     reset(); // Reset the form after submission
   };
 
@@ -38,35 +40,32 @@ const Mainfooter = () => {
             <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter.</p>
             <div className="border-right"></div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="mt-2">
           <Form
               className="d-flex gap-2 justify-content-lg-end justify-content-md-start w-100 px-lg-5 px-0"
               onSubmit={handleSubmit(onSubmit)} // Trigger form submission on form submit event
             >
               <Form.Control
-                className="formcontrol w-100"
+                className="formcontrol w-100 m-0"
                 // type="email"
                 placeholder="Enter your email"
                 aria-label="Search"
                 {...register("email")}
+                style={{
+                  boxShadow: "none",
+                  outline: "none"}}
               />
-              <Button className="btn-footer text-capitalize" type="submit">
+              <MkBtn label={"Subscribe"} />
+              {/* <Button className="btn-footer text-capitalize" type="submit">
                 subscribe
-              </Button>
+              </Button> */}
             </Form>
               {errors.email && <span className="text-danger">{errors.email.message}</span>}
           </Col>
         </Row>
-      </Container>
-    </div>
-  );
-};
+        
 
-export default Mainfooter;
-
-
-
-{/* <hr />
+<hr />
 <Row className="pt-5">
   <Col lg={5}>
     <img src={logo} className="rotate-img" alt="" />
@@ -151,4 +150,11 @@ export default Mainfooter;
       Fax: 123456
     </p>
   </Col>
-</Row> */}
+</Row>
+      </Container>
+    </div>
+  );
+};
+
+export default Mainfooter;
+

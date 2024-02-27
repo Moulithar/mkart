@@ -1,30 +1,46 @@
 .special {
-    background: url(../images/1.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 190px;
-    padding-bottom: 190px;
-    background-position: 50%;
+  background: url(../images/1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 190px;
+  padding-bottom: 190px;
+  background-position: 50%;
 }
 
-.special span h1{
-    color: #ff5141;
-
- 
+.special span h1 {
+  color: #ff5141;
 }
 
-
-.special h1 , h2{
-   
-    font-size: 50px;
-    text-align: center;
+.primary-header {
+  font-size: 64px;
+}
+.secondary-header {
+  font-size: 24px;
+  letter-spacing: 0.4em;
 }
 
-.mainfooter .formcontol{
-    display: flex;
-    justify-content: end;
+@media screen and (max-width: 1200px) {
+  .primary-header {
+    font-size: 44px;
+  }
+  .secondary-header {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .primary-header {
+    font-size: 22px;
+  }
+  .secondary-header {
+    font-size: 10px;
+  }
+}
+
+.mainfooter .formcontol {
+  display: flex;
+  justify-content: end;
 }

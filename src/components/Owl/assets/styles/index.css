@@ -8,61 +8,26 @@
   overflow: hidden;
 }
 .content {
-  position: relative;
-}
-.content h2 {
   position: absolute;
-  font-size: 50px;
+
   font-weight: 900;
-  top: -330px;
-  left: 100px;
-  text-transform: uppercase;
+
+  /* left: 100px; */
+  padding-left: 1%;
+  text-transform: capitalize;
+  /* color: #ff4c3b; */
+}
+
+.text-orange{
   color: #ff4c3b;
 }
-.content h4 {
-  position: absolute;
-  font-size: 25px;
-  font-weight: 600;
-  top: -250px;
-  left: 100px;
-  text-transform: uppercase;
-  color: #000000;
+
+.text-light-grey{
+  color: #777777;
 }
 
-@media screen and (max-width: 992px) {
-  .content h2 {
-    position: absolute;
-    font-size: 35px;
-    top: -250px;
-    left: 100px;
-    text-transform: uppercase;
-    color: #ff4c3b;
-  }
-  .content h4 {
-    position: absolute;
-    font-size: 22px;
-    top: -200px;
-    left: 100px;
-    text-transform: uppercase;
-    color: #000000;
-  }
-}
 
-@media screen and (max-width: 767px) {
-  .content h2 {
-    font-size: 18px;
-    top: -122px;
-    left: 41px;
-  }
-  .content h4 {
-    position: absolute;
-    font-size: 12px;
-    top: -102px;
-    left: 41px;
-    text-transform: uppercase;
-    color: #000000;
-  }
-}
+
 
 /* Add styles for the arrows */
 .slider-banner .slick-prev,

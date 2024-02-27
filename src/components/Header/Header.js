@@ -119,22 +119,22 @@ const Header = () => {
                     <button className="dropbtn">shop</button>
                     <div className="dropdown-content">
                       <ul>
-                        <li>
+                         <li >
                           <a className="fromleft" href="">
                             {" "}
-                            women
+                  Location
                           </a>
                         </li>
-                        <li>
+                         <li >
                           <a className="fromleft" href="">
                             {" "}
-                            clothing
+                        Brands Available
                           </a>
                         </li>
-                        <li>
+                         <li >
                           <a className="fromleft" href="">
                             {" "}
-                            accesories
+                            Contact
                           </a>
                         </li>
                    
@@ -151,19 +151,21 @@ const Header = () => {
                         <li>
                           <a className="fromleft" href="">
                             {" "}
-                            women
+                            Brands
+
                           </a>
                         </li>
                         <li>
                           <a className="fromleft" href="">
                             {" "}
-                            clothing
+                            Contact
+
                           </a>
                         </li>
                         <li>
                           <a className="fromleft" href="">
                             {" "}
-                            accesories
+                            Help
                           </a>
                         </li>
                       </ul>
@@ -249,6 +251,9 @@ const Header = () => {
                           style={{
                             backgroundColor: "",
                             color: "#000",
+                            borderBottom: index -2 ? "1px solid #e6e6e6" : "",
+                            padding: "5px"
+
                           }}
                           className="d-flex justify-content-between"
                           key={data.id}

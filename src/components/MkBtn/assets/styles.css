@@ -1,0 +1,42 @@
+.mk-btn {
+    &:before {
+      content: "";
+      position: absolute;
+      height: 200px;
+      width: 70px;
+      transform: rotate(140deg);
+      background-color: rgb(255 255 255);
+      left: 245px;
+      top: -83px;
+      border-inline-end: 38px solid rgb(256, 256, 256, 0.5);
+    }
+    &:hover {
+background-color: #fff;
+color: #000;
+      &:before {
+        transition: left 500ms ease;
+        left: -120px;
+        background-color: rgba(158, 158, 158, 0.2);
+
+      }
+    }
+  }
+
+.mk-btn {
+  background-color:#ff4c3b;
+  border: 1px solid #ff4c3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 5%;
+  /* height: 55px; */
+  width: fit-content;
+
+  cursor: pointer;
+  position: relative;
+  transition: transform 200ms ease;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+}

@@ -106,6 +106,9 @@ navbar
   text-decoration: none;
 }
 
+li a{
+  text-decoration: none;
+}
 li {
   margin-bottom: 0px !important;
 }
@@ -125,3 +128,7 @@ li {
   /* width: 100px; */
   /* background-color: #ff5141; */
 }
+
+.form-control:focus{
+  border-color: #ff5141 !important;
+} 
