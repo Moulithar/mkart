@@ -97,7 +97,7 @@ const Header = () => {
           <Navbar expand="lg" className="navbar">
             <Container fluid>
               <Navbar.Brand href="#">
-                <img src={logo} className="logo" alt="" />
+                <img src={logo} className="logo w-25" alt="" />
               </Navbar.Brand>
               {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
 

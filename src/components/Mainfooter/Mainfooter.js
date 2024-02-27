@@ -34,15 +34,15 @@ const Mainfooter = () => {
   return (
     <div className="mainfooter">
       <Container>
-        <Row className="main-footer-left">
+        <Row className="main-footer-left ">
           <Col lg={6} className="">
             <h5>know it all first </h5>
             <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter.</p>
             <div className="border-right"></div>
           </Col>
-          <Col lg={6} className="mt-2">
+          <Col lg={6} className="mt-2  px-lg-5 px-0">
           <Form
-              className="d-flex gap-2 justify-content-lg-end justify-content-md-start w-100 px-lg-5 px-0"
+              className="d-flex gap-2 justify-content-lg-end justify-content-md-start w-100"
               onSubmit={handleSubmit(onSubmit)} // Trigger form submission on form submit event
             >
               <Form.Control
@@ -68,7 +68,7 @@ const Mainfooter = () => {
 <hr />
 <Row className="pt-5">
   <Col lg={5}>
-    <img src={logo} className="rotate-img" alt="" />
+    <img src={logo} className="rotate-img w-25" alt="" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
