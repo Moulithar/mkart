@@ -77,7 +77,7 @@ const Mainfooter = () => {
     <div className="d-flex"></div>
   </Col>
   <Col lg={2}>
-    <h6>my account</h6>
+    <h6 className="footer-heading">my account</h6>
     <ul>
       <li>
         <a className="fromleft" href="">
@@ -106,7 +106,7 @@ const Mainfooter = () => {
     </ul>
   </Col>
   <Col lg={2}>
-    <h6>why we choose</h6>
+    <h6 className="footer-heading">why we choose</h6>
     <ul>
       <li>
         <a className="fromleft" href="">
@@ -139,7 +139,7 @@ const Mainfooter = () => {
     </ul>
   </Col>
   <Col lg={3}>
-    <h6>Store Information</h6>
+    <h6 className="footer-heading">Store Information</h6>
     <p>
       Multikart Demo Store, Demo Store India 345-659
       <br />

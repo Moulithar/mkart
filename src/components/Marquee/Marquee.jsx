@@ -10,6 +10,7 @@ import {
   marquee7,
   marquee8,
 } from "./assets/images/1.png"
+import Slider from "react-slick"
 
 const data = [
   {
@@ -73,10 +74,8 @@ const scrollAnimation = keyframes`
 `
 
 const ScrollImage = styled.img`
-  width: auto;
-  max-height: 100%;
   opacity: 0.5;
-  margin-inline: 75px;
+
   cursor: pointer;
   transition: opacity 0.3s ease;
 
@@ -96,18 +95,44 @@ const MarqueeContent = styled.div`
 `
 
 const Marquee = () => {
+  var settings = {
+    dots: false,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    arrows: false,
+  }
   return (
-    <MarqueeWrapper className="my-5">
-      <MarqueeContent>
+    <>
+      {/* <MarqueeWrapper className="my-5">
+        <MarqueeContent>
+          {data.map((data, index) => (
+            <ScrollImage
+              key={index}
+              src={`https://themes.pixelstrap.com/multikart/assets/images/logos/${data?.value}.png`}
+              alt={`Logo ${index}`}
+            />
+          ))}
+        </MarqueeContent>
+      </MarqueeWrapper> */}
+
+      <section className=" position-relative">
+        <Slider {...settings}>
         {data.map((data, index) => (
-          <ScrollImage
-            key={index}
-            src={`https://themes.pixelstrap.com/multikart/assets/images/logos/${data?.value}.png`}
-            alt={`Logo ${index}`}
-          />
-        ))}
-      </MarqueeContent>
-    </MarqueeWrapper>
+          <div className="d-flex  justify-content-center align-items-center">
+            
+            <ScrollImage
+              key={index}
+              src={`https://themes.pixelstrap.com/multikart/assets/images/logos/${data?.value}.png`}
+              alt={`Logo ${index}`}
+          className="img-fluid"
+            />
+          </div>
+          ))}
+        </Slider>
+      </section>
+    </>
   )
 }
 
