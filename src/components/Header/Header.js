@@ -22,7 +22,7 @@ import {
   faChevronUp,
   faHamburger,
 } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const Header = () => {
   const [show, setShow] = useState(false)
@@ -41,9 +41,9 @@ const Header = () => {
       id: 3,
       name: "Shop",
       dropDownContent: [
-        { id: 21, name: "Product" },
-        { id: 22, name: "Cart" },
-        { id: 23, name: "Contact" },
+        { id: 21, name: "Products", link: "Products" },
+        { id: 22, name: "Cart" , link: "Cart"},
+        { id: 23, name: "Contact Us", link: "Contact" },
       ],
     },
     {
@@ -96,17 +96,19 @@ const Header = () => {
         <Container>
           <Navbar expand="lg" className="navbar">
             <Container fluid>
-              <Navbar.Brand href="#">
-                <img
-                  src={logo}
-                  className="logo"
-                  alt=""
-                  style={{
-                    width: "100px",
-                    height: "auto",
-                  }}
-                />
-              </Navbar.Brand>
+              <Link to="/">
+                <Navbar.Brand href="#">
+                  <img
+                    src={logo}
+                    className="logo"
+                    alt=""
+                    style={{
+                      width: "100px",
+                      height: "auto",
+                    }}
+                  />
+                </Navbar.Brand>
+              </Link>
               {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
 
               <Navbar.Collapse id="navbarScroll ">
@@ -135,24 +137,31 @@ const Header = () => {
                     <button className="dropbtn">shop</button>
                     <div className="dropdown-content">
                       <ul>
-                        <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            Products
-                          </a>
-                        </li>
-                        <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            Cart
-                          </a>
-                        </li>
-                        <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            Contact Us
-                          </a>
-                        </li>
+                        <Link to="/Products">
+                          {" "}
+                          <li>
+                            <a className="fromleft" href="">
+                              {" "}
+                              Products
+                            </a>
+                          </li>
+                        </Link>
+                        <Link to="/Cart">
+                          <li>
+                            <a className="fromleft" href="">
+                              {" "}
+                              Cart
+                            </a>
+                          </li>
+                        </Link>
+                        <Link to="/Contact">
+                          <li>
+                            <a className="fromleft" href="">
+                              {" "}
+                              Contact Us
+                            </a>
+                          </li>
+                        </Link>
                       </ul>
                     </div>
                   </div>
@@ -211,27 +220,33 @@ const Header = () => {
           <Offcanvas show={show} onHide={handleClose} placement="end">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
-                <Navbar.Brand href="#">
-                  <img
-                    src={logo}
-                    className="logo h-auto"
-                    alt=""
-                    style={{
-                      width: "100px",
-                    }}
-                  />
-                </Navbar.Brand>
+                <Link to="/">
+                  <Navbar.Brand href="#">
+                    <img
+                      src={logo}
+                      className="logo h-auto"
+                      alt=""
+                      style={{
+                        width: "100px",
+                      }}
+                    />
+                  </Navbar.Brand>
+                </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="text-capitalize">
               {data.map((item, index) => (
                 <>
-                  <div key={item.id} className="d-flex justify-content-between">
+                  <div
+                    key={item.id}
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => toggleDropdown(item.id)}
+                  >
                     <Link
                       to={item.link}
-                      className="text-decoration-none text-dark"
+                      className="text-decoration-none text-dark fw-bolder my-2"
                     >
-                      <div>{item.name}</div>
+                      <h6 className="m-0">{item.name}</h6>
                     </Link>
                     {item.dropDownContent && (
                       <div
@@ -244,36 +259,40 @@ const Header = () => {
                               ? "rotate(90deg)"
                               : "rotate(0deg)",
                         }}
-                        onClick={() => toggleDropdown(item.id)}
                       >
                         <FontAwesomeIcon icon={faChevronRight} />
                       </div>
                     )}
                   </div>
-                  {}
-                  {index < data.length - 1 && <hr />}
+                
+                  {index < data.length - 1 && <hr  className="m-0"/>}
                   {item?.dropDownContent && openDropdown === item.id && (
+                    // <Link to={data.name}>
+
                     <div>
                       {item?.dropDownContent.map((data, index, array) => (
                         <div
                           style={{
                             backgroundColor: "",
-                            color: "#000",
+                            color: "#777777",
+                            cursor: "pointer",
                             borderBottom:
                               index < item?.dropDownContent.length - 1
                                 ? "1px solid #e6e6e6"
                                 : "",
                             padding: "5px",
                           }}
-                          className="d-flex justify-content-between"
+                          className="d-flex justify-content-start gap-3 align-items-center"
                           key={data.id}
+                          onClick={()=>{
+                            navigate(`/${data?.link}`)
+                          }}
                         >
-                   
-                          {data?.index}
-                          {data?.name}
+                          <i class="bi bi-arrow-right-short"></i> {data?.name}
                         </div>
                       ))}
                     </div>
+                    // </Link>
                   )}
                 </>
               ))}

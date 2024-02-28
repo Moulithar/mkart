@@ -20,10 +20,12 @@ const Owl = () => {
 
   return (
     <>
-      <section className=" position-relative">
+      <section className=" position-relative slider">
         <Slider {...settings}>
           <div className=" d-flex align-items-center ">
-            <img src={bannerimg} />
+            <img src={bannerimg} style={{
+              
+            }}/>
             <div className="content">
               <div className="d-flex  flex-column align-items-center justify-content-center">
               <div className=" secondary-header text-light-grey">

@@ -51,7 +51,7 @@ const Mainfooter = () => {
           <Col lg={5} >
             <h5>know it all first </h5>
             <p>
-              Never Miss Anything From Multikart By Signing Up To Our
+              Never Miss Anything By Signing Up To Our
               Newsletter.
             </p>
             {/* <div className="border-right"></div> */}

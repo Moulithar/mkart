@@ -4,8 +4,17 @@
     background-repeat: no-repeat;
     background-position: center;
 } */
+.slider .slick-slide img{
+  height: 75vh;
+  width: 100%;
+  object-fit: cover;
+  /* background-image: url(https://angular.pixelstrap.com/multikart/assets/images/slider/1.jpg); */
+  /* background-repeat: no-repeat; */
+}
+
 .slider-banner .slick-slider {
   overflow: hidden;
+
 }
 .content {
   position: absolute;

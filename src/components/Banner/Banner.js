@@ -12,7 +12,7 @@ import "./assets/styles/index.css"
 
 const Banner = () => {
   return (
-    <Container className="my-5">
+    <Container className="my-5 ">
       <Row>
         <Col lg={6}>
           <div className="banner cursor-pointer">
