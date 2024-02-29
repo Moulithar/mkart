@@ -56,9 +56,9 @@ const Products = () => {
                   overflow: 'hidden',
                   textOverflow: 'ellipsis'
               }}>{product?.description}</p>
-              <Button className="mk-btn">
+              <button className="mk-btn-inverse">
                 shop now !
-              </Button>
+              </button>
                 </Stack>
             </Col>
         )

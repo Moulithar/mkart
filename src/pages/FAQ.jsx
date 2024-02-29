@@ -32,7 +32,7 @@ const Search = () => {
   return (
     <div>
       <Header />
-      <BreadCrumb folder={"Blogs"} />
+      <BreadCrumb folder={"FAQ"}  subfolder={"Features / FAQ"}/>
       <Container className="p-5">
         {AccordionData.map((data, index) => {
           return (
