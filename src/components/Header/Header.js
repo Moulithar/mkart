@@ -42,7 +42,7 @@ const Header = () => {
       name: "Shop",
       dropDownContent: [
         { id: 21, name: "Products", link: "Products" },
-        { id: 22, name: "Cart" , link: "Cart"},
+        { id: 22, name: "Cart", link: "Cart" },
         { id: 23, name: "Contact Us", link: "Contact" },
       ],
     },
@@ -50,8 +50,8 @@ const Header = () => {
       id: 4,
       name: "Features",
       dropDownContent: [
-        { id: 31, name: "Search" },
-        { id: 32, name: "FAQ" },
+        { id: 31, name: "Search", link: "Search" },
+        { id: 32, name: "FAQ", link: "FAQ" },
       ],
     },
 
@@ -171,17 +171,21 @@ const Header = () => {
                     <button className="dropbtn">features</button>
                     <div className="dropdown-content">
                       <ul>
+                        <Link to="/Search">
+                          <li>
+                            <a className="fromleft" href="">
+                              {" "}
+                              Search
+                            </a>
+                          </li>
+                        </Link>
                         <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            Search
-                          </a>
-                        </li>
-                        <li>
-                          <a className="fromleft" href="">
-                            {" "}
-                            FAQ
-                          </a>
+                          <Link to="/FAQ">
+                            <a className="fromleft" href="">
+                              {" "}
+                              FAQ
+                            </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -264,8 +268,8 @@ const Header = () => {
                       </div>
                     )}
                   </div>
-                
-                  {index < data.length - 1 && <hr  className="m-0"/>}
+
+                  {index < data.length - 1 && <hr className="m-0" />}
                   {item?.dropDownContent && openDropdown === item.id && (
                     // <Link to={data.name}>
 
@@ -284,7 +288,7 @@ const Header = () => {
                           }}
                           className="d-flex justify-content-start gap-3 align-items-center"
                           key={data.id}
-                          onClick={()=>{
+                          onClick={() => {
                             navigate(`/${data?.link}`)
                           }}
                         >
