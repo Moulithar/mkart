@@ -12,6 +12,14 @@
   /* background-repeat: no-repeat; */
 }
 
+@media screen and (max-width: 767px) {
+  .slider .slick-slide img {
+    /* Adjust the positioning to move the image to the right */
+    height: 50vh;
+    /* left: 15%;  */
+    /* transform: translateX(-50%);  */
+  }
+}
 .slider-banner .slick-slider {
   overflow: hidden;
 
