@@ -45,7 +45,7 @@ const Mainfooter = () => {
   }
 
   return (
-    <div className="mainfooter">
+    <div className="mainfooter pt-5">
       <Container>
         <Row className="main-footer-left">
           <Col lg={5} >
@@ -164,7 +164,7 @@ const Mainfooter = () => {
               </li>
               <li>
                 <a className="fromleft" href="">
-                  contactsy
+                  contacts
                 </a>
               </li>
             </ul>
