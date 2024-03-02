@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col"
 
 const Offer = () => {
   return (
-    <div className="offer text-center">
+    <div className="offer text-center py-5">
       <Container>
         <Row>
           <span>
