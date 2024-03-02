@@ -39,25 +39,7 @@
   text-transform: capitalize;
 }
 
-.mk-btn-inverse {
-    background-color: #ffffff ;
-    border: 2px solid #ff4c3b !important;
-    display: flex;
-    justify-content: center;
-    border-radius: 0;
-    font-size: 12px;
-    align-items: center;
-    padding: 4% 8%;
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    transition: transform 200ms ease;
-    overflow: hidden;
-    color: #000;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  
+
   .mk-btn-inverse {
     &:before {
       content: "";
@@ -80,5 +62,24 @@
         background-color: rgba(158, 158, 158, 0.2);
       }
     }
+  }
+  
+  .mk-btn-inverse {
+    background-color: #ffffff ;
+    border: 2px solid #ff4c3b !important;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    font-size: 12px;
+    align-items: center;
+    padding: 4% 8%;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    transition: transform 200ms ease;
+    overflow: hidden;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   

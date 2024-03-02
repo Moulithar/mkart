@@ -37,10 +37,10 @@ const Products = () => {
       {ProductsData.map((product, index) => {
         return (
             <Col lg={3} className="gx-3 gy-5" key={index}>
-                <Stack style={{
+                <div style={{
                     gap: '16px',
                     placeItems: "center"
-                }}>
+                }} className="d-flex flex-column">
 
               <img
                 src={product?.image}
@@ -57,9 +57,9 @@ const Products = () => {
                   textOverflow: 'ellipsis'
               }}>{product?.description}</p>
               <div className="mk-btn-inverse">
-                shop now ! owho def
+                shop now !
               </div>
-                </Stack>
+                </div>
             </Col>
         )
     })}
