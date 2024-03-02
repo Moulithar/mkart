@@ -60,7 +60,7 @@ const Mainfooter = () => {
 
           <Seperator />
           </Col>
-          <Col lg={5} className="mt-2 d-flex justify-content-end">
+          <Col lg={5} className="mt-2">
             <Form
               className="d-flex gap-2 justify-content-lg-end justify-content-md-start w-100"
               onSubmit={handleSubmit(onSubmit)} // Attach handleSubmit to the form
@@ -77,18 +77,19 @@ const Mainfooter = () => {
                 }}
               />
               <Button type="submit" className="mk-btn">
+          
                 Subscribe
               </Button>{" "}
               {/* Use a regular Button for submission */}
             </Form>
-            {errors.email && (
+              {errors.email && (
               <span className="text-danger">{errors.email.message}</span>
             )}
           </Col>
         </Row>
 
         <hr />
-        <Row className="pt-5">
+        <Row className="">
           <Col lg={5}>
             <img
               src={logo}
@@ -107,7 +108,7 @@ const Mainfooter = () => {
             <div className="d-flex"></div>
           </Col>
           <Col lg={2}>
-            <h6 className="footer-heading">my account</h6>
+            <h6 className="footer-heading mt-3">my account</h6>
             <ul>
               <li>
                 <a className="fromleft" href="">
@@ -136,7 +137,7 @@ const Mainfooter = () => {
             </ul>
           </Col>
           <Col lg={2}>
-            <h6 className="footer-heading">why we choose</h6>
+            <h6 className="footer-heading mt-3">why we choose</h6>
             <ul>
               <li>
                 <a className="fromleft" href="">
@@ -169,7 +170,7 @@ const Mainfooter = () => {
             </ul>
           </Col>
           <Col lg={3}>
-            <h6 className="footer-heading">Store Information</h6>
+            <h6 className="footer-heading mt-3">Store Information</h6>
             <p>
               Multikart Demo Store, Demo Store India 345-659
               <br />
