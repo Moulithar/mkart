@@ -11,7 +11,7 @@ const Search = () => {
     <div>
       <Header />
       <BreadCrumb folder={"Search"} subfolder={"Features / Search"} />
-      <Container style={{display: "grid", placeItems: "center"}} className="p-lg-5 p-1">
+      <Container style={{display: "grid", placeItems: "center"}} className="p-lg-5 p-4">
         <input placeholder="Search a product"
         className=""
         style={{

@@ -33,7 +33,7 @@ const Search = () => {
     <div>
       <Header />
       <BreadCrumb folder={"FAQ"}  subfolder={"Features / FAQ"}/>
-      <Container className="p-5">
+      <Container className="p-lg-5 p-4">
         {AccordionData.map((data, index) => {
           return (
             <Accordion defaultActiveKey={index == 0 ? " " : ["0"]} alwaysOpen style={{
