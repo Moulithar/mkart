@@ -242,11 +242,11 @@ const Blog = () => {
           )
 
           return (
-            <Row key={index} className="g-5 py-5">
+            <Row key={index} className="py-5">
               <Col lg={6} className="">
                 <img src={data?.image} className="img-fluid" alt="" />
               </Col>
-              <Col lg={6} className="d-flex align-items-center flex-wrap">
+              <Col lg={6} className=" d-flex align-items-center flex-wrap">
                 <div>
                   <h6 className="text-orange">{data?.date}</h6>
                   <h4 className="mb-2">{data?.title}</h4>
@@ -259,10 +259,7 @@ const Blog = () => {
                       trigger="click"
                       placement="bottom"
                       overlay={popover2}
-                   
                       rootClose={true}
-
-
                     >
                       <div className="d-flex gap-2 cursor-pointer">
                         <i className="icons bi bi-heart-fill"> </i>
