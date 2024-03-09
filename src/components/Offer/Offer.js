@@ -3,6 +3,7 @@ import React from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import ""
 // import Form from 'react-bootstrap/Form';
 // import logo from "./assets/styles/logo.png";
 
@@ -18,7 +19,7 @@ const Offer = () => {
 
           <p className="text-center mb-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. yeah also abigail been streak commit 1.
+            industry. yeah also abigail been streak commit 2.
             <br />
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s,
