@@ -1,35 +1,27 @@
-import React, { useState } from "react"
+import { faBars, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import axios from "axios"
+import { Link, navigate } from "gatsby"
+import React, { useRef, useState } from "react"
+import { Form, Offcanvas } from "react-bootstrap"
 import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-// import Form from 'react-bootstrap/Form';
+import Modal from "react-bootstrap/Modal"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Row from "react-bootstrap/Row"
 import logo from "./assets/images/logo.png"
-// import dna from "../../../public/static/dna_logo.png"
 import "./assets/styles/index.css"
-import { Offcanvas } from "react-bootstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faArrowAltCircleRight,
-  faArrowCircleRight,
-  faArrowDown,
-  faArrowUp,
-  faBars,
-  faCableCar,
-  faChevronDown,
-  faChevronRight,
-  faChevronUp,
-  faHamburger,
-} from "@fortawesome/free-solid-svg-icons"
-import { Link, navigate } from "gatsby"
 
 const Header = () => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+  const [show1, setShow1] = useState(false)
+
+  const handleClose1 = () => setShow1(false)
+  const handleShow1 = () => setShow1(true)
 
   const data = [
     { id: 1, name: "Home", link: "/" },
@@ -67,6 +59,25 @@ const Header = () => {
   const toggleDropdown = id => {
     setOpenDropdown(openDropdown === id ? null : id)
   }
+
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
+
+  const handleSubmit = async event => {
+    event.preventDefault()
+
+    alert("gomtha")
+    axios
+      .get("https://vidly-hyqq.onrender.com/api/genres", {
+        name: "majendra mahapathi",
+        email: "moulimouli98@gmail.com",
+        password: "11111111",
+      })
+      .then(res => console.log(res))
+      .catch(err => console.log(err.message))
+  }
+
   return (
     <>
       <div className="header-top ">
@@ -87,6 +98,53 @@ const Header = () => {
                 <p>
                   <i className=" icons bi bi-person-fill"> &nbsp; </i> account
                 </p>
+                <>
+                  <Button variant="" onClick={handleShow1}>
+                    Register
+                  </Button>
+
+                  <Modal show={show1} onHide={handleClose1}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Register your account</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Form onSubmit={handleSubmit}>
+                        <Form.Group controlId="exampleForm.ControlInput1">
+                          <Form.Label>Enter your name</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="Enter your name"
+                            ref={nameRef}
+                          />
+                        </Form.Group>
+                        <Form.Group controlId="exampleForm.ControlInput2">
+                          <Form.Label>Email address</Form.Label>
+                          <Form.Control
+                            type="email"
+                            placeholder="name@example.com"
+                            ref={emailRef}
+                          />
+                        </Form.Group>
+                        <Form.Group controlId="exampleForm.ControlInput3">
+                          <Form.Label>Enter your password</Form.Label>
+                          <Form.Control
+                            type="password"
+                            placeholder="Enter your password"
+                            ref={passwordRef}
+                          />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                          Submit
+                        </Button>
+                      </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose1}>
+                        Close
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </>
               </div>
             </div>
           </Row>
@@ -108,7 +166,6 @@ const Header = () => {
                       height: "auto",
                     }}
                   />
-             
                 </Navbar.Brand>
               </Link>
               {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
