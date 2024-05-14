@@ -67,10 +67,10 @@ const Header = () => {
   const handleSubmit = async event => {
     event.preventDefault()
 
-    alert("gomtha")
+    alert("go")
     axios
       .get("https://vidly-hyqq.onrender.com/api/genres", {
-        name: "majendra mahapathi",
+        name: "mahendra sing dhoni",
         email: "moulimouli98@gmail.com",
         password: "11111111",
       })
@@ -153,19 +153,18 @@ const Header = () => {
         <Container>
           <Navbar expand="lg" className="navbar">
             <Container fluid>
-              <Link to="/">
-                <Navbar.Brand href="#">
-                  <img
-                    src={logo}
-                    className="logo"
-                    alt=""
-                    style={{
-                      width: "100px",
-                      height: "auto",
-                    }}
-                  />
-                </Navbar.Brand>
-              </Link>
+              <Navbar.Brand href="#">
+                <img
+                  src={logo}
+                  className="logo"
+                  alt=""
+                  style={{
+                    width: "100px",
+                    height: "auto",
+                  }}
+                />
+              </Navbar.Brand>
+
               {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
 
               <Navbar.Collapse id="navbarScroll ">
