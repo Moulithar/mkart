@@ -1,9 +1,9 @@
 import React from "react"
-import Header from "../components/Header/Header"
-import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
-import Mainfooter from "../components/Mainfooter/Mainfooter"
-import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
 import { Accordion, Container } from "react-bootstrap"
+import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
+import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
+import Header from "../components/Header/Header"
+import Mainfooter from "../components/Mainfooter/Mainfooter"
 
 const Search = () => {
   const AccordionData = [

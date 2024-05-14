@@ -1,12 +1,11 @@
 import React from "react"
 import Slider from "react-slick"
-import { Container, Row, Col } from "react-bootstrap"
-import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import bannerimg from "../../images/banner.jpg"
+import "slick-carousel/slick/slick.css"
 import bannersecond from "../../images/banner-black.jpg"
-import "./assets/styles/index.css"
+import bannerimg from "../../images/banner.jpg"
 import MkBtn from "../MkBtn/MkBtn"
+import "./assets/styles/index.css"
 
 const Owl = () => {
   var settings = {

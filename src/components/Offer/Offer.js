@@ -2,7 +2,6 @@ import React from "react"
 // import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 // import dna_image from "../../../public/static/dna_logo.png"
 // import Form from 'react-bootstrap/Form';
 // import logo from "./assets/styles/logo.png";

@@ -1,22 +1,22 @@
 import React, { useState } from "react"
 // import Button from 'react-bootstrap/Button';
+import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 // import Form from 'react-bootstrap/Form';
 // import logo from "./assets/styles/logo.png";
-import fashion1 from "./assets/styles/5.jpg"
-import fashion2 from "./assets/styles/8.jpg"
+import { Nav, Tab } from "react-bootstrap"
+import styled, { keyframes } from "styled-components"
+import StarRatings from "../StarRatings/StarRatings"
 import fashion3 from "./assets/styles/14.jpg"
 import fashion4 from "./assets/styles/25.jpg"
 import fashion5 from "./assets/styles/26.jpg"
 import fashion6 from "./assets/styles/33.jpg"
 import fashion7 from "./assets/styles/39.jpg"
 import fashion8 from "./assets/styles/40.jpg"
+import fashion1 from "./assets/styles/5.jpg"
+import fashion2 from "./assets/styles/8.jpg"
 import "./assets/styles/index.css"
-import styled, { keyframes } from "styled-components"
-import { Nav, Tab } from "react-bootstrap"
-import StarRatings from "../StarRatings/StarRatings"
 
 const fadeIn = keyframes`
   from {

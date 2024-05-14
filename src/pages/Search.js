@@ -1,11 +1,11 @@
 import React from "react"
-import Header from "../components/Header/Header"
-import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
-import Mainfooter from "../components/Mainfooter/Mainfooter"
 import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
+import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
+import Header from "../components/Header/Header"
+import Mainfooter from "../components/Mainfooter/Mainfooter"
 
-import emptySearch from "./assets/styles/empty-search.jpg"
 import { Container } from "react-bootstrap"
+import emptySearch from "./assets/styles/empty-search.jpg"
 const Search = () => {
   return (
     <div>

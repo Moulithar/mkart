@@ -1,10 +1,10 @@
 import React from "react"
+import { Container } from "react-bootstrap"
+import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
+import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import Header from "../components/Header/Header"
 import Mainfooter from "../components/Mainfooter/Mainfooter"
-import Bottomfooter from "../components/Bottomfooter/Bottomfooter"
 import aboutBanner from "../images/about-main.jpg"
-import { Container } from "react-bootstrap"
-import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 
 const AboutPage = () => {
   return (

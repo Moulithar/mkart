@@ -1,16 +1,15 @@
-import React from "react"
-import { useForm } from "react-hook-form"
-import * as yup from "yup" // Import Yup for schema validation
 import { yupResolver } from "@hookform/resolvers/yup"
+import React from "react"
 import Button from "react-bootstrap/Button"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form"
-import logo from "./assets/styles/logo.png"
-import "./assets/styles/index.css"
-import MkBtn from "../MkBtn/MkBtn"
+import Row from "react-bootstrap/Row"
+import { useForm } from "react-hook-form"
 import styled from "styled-components"
+import * as yup from "yup"; // Import Yup for schema validation
+import "./assets/styles/index.css"
+import logo from "./assets/styles/logo.png"
 
 const Seperator = styled.div`
 width: 1px;
@@ -110,7 +109,7 @@ const Mainfooter = () => {
           <Col lg={2}>
             <h6 className="footer-heading mt-3">my account</h6>
             <ul>
-              <li>
+              <li className="list-style-none">
                 <a className="fromleft" href="">
                   {" "}
                   women

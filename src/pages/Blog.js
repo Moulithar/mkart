@@ -10,10 +10,8 @@ import image3 from "./assets/styles/3.jpg"
 import image4 from "./assets/styles/4.jpg"
 import image5 from "./assets/styles/5.jpg"
 
-import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
-import Button from "react-bootstrap/Button"
 import OverlayTrigger from "react-bootstrap/OverlayTrigger"
-import Tooltip from "react-bootstrap/Tooltip"
+import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import MkModal from "../components/Modal/Modal"
 
 const StyledSeperator = styled.div`
@@ -21,18 +19,18 @@ const StyledSeperator = styled.div`
   background-color: #000;
   width: 1px;
 `
-const Seperator = styled.div`
-  width: 200px;
-  height: 100%;
-  background-color: #ddd;
-  ::after {
-    content: "qasq";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: block;
-  }
-`
+// const Seperator = styled.div`
+//   width: 200px;
+//   height: 100%;
+//   background-color: #ddd;
+//   ::after {
+//     content: "qasq";
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//     display: block;
+//   }
+// `
 const blogData = [
   {
     id: 1,
@@ -51,12 +49,14 @@ const blogData = [
       {
         id: 1,
         user: "John Doe",
-        description: "This is an insightful comment. It really makes you think about the nature of pleasure and pain.",
+        description:
+          "This is an insightful comment. It really makes you think about the nature of pleasure and pain.",
       },
       {
         id: 2,
         user: "Jane Smith",
-        description: "I agree with John. It's interesting how pleasure and pain are intertwined.",
+        description:
+          "I agree with John. It's interesting how pleasure and pain are intertwined.",
       },
     ],
   },
@@ -74,8 +74,18 @@ const blogData = [
       { id: 2, user: "Mia Malkova" },
     ],
     comments: [
-      { id: 1, user: "Alice Johnson", description: "I found this post to be very thought-provoking. It challenges common notions of pleasure and pain." },
-      { id: 2, user: "Bob Smith", description: "Great post! It really makes you reconsider your perspective on pleasure and pain." },
+      {
+        id: 1,
+        user: "Alice Johnson",
+        description:
+          "I found this post to be very thought-provoking. It challenges common notions of pleasure and pain.",
+      },
+      {
+        id: 2,
+        user: "Bob Smith",
+        description:
+          "Great post! It really makes you reconsider your perspective on pleasure and pain.",
+      },
     ],
   },
   {
@@ -91,8 +101,19 @@ const blogData = [
       { id: 2, user: "Sasha Grey" },
     ],
     comments: [
-      { id: 1, user: "Charlie Brown", image: "https://picsum.photos/150/150", description: "Interesting read! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { id: 2, user: "Lucy Smith", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam." },
+      {
+        id: 1,
+        user: "Charlie Brown",
+        image: "https://picsum.photos/150/150",
+        description:
+          "Interesting read! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        id: 2,
+        user: "Lucy Smith",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      },
     ],
   },
   {
@@ -109,8 +130,18 @@ const blogData = [
       { id: 2, user: "Tori Black" },
     ],
     comments: [
-      { id: 1, user: "David Johnson", description: "This post really resonated with me. It captures the essence of the human experience in a profound way." },
-      { id: 2, user: "Emily Wilson", description: "I enjoyed reading this! It offers a fresh perspective on an age-old question." },
+      {
+        id: 1,
+        user: "David Johnson",
+        description:
+          "This post really resonated with me. It captures the essence of the human experience in a profound way.",
+      },
+      {
+        id: 2,
+        user: "Emily Wilson",
+        description:
+          "I enjoyed reading this! It offers a fresh perspective on an age-old question.",
+      },
     ],
   },
   {
@@ -127,8 +158,18 @@ const blogData = [
       { id: 2, user: "Kendra spade" },
     ],
     comments: [
-      { id: 1, user: "Oliver Thompson", description: "Fantastic read! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { id: 2, user: "Sophia Johnson", description: "Brilliant post! Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+      {
+        id: 1,
+        user: "Oliver Thompson",
+        description:
+          "Fantastic read! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        id: 2,
+        user: "Sophia Johnson",
+        description:
+          "Brilliant post! Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      },
     ],
   },
   {
@@ -145,18 +186,65 @@ const blogData = [
       { id: 2, user: "Kendra spade" },
     ],
     comments: [
-      { id: 1, user: "William Miller", image: "https://picsum.photos/150/150", description: "Great insights! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", createdAt: "2024-02-28T08:00:00.000Z" },
-      { id: 2, user: "Emily Jones", image: "https://picsum.photos/151/150", description: "I found this post to be very enlightening. It sheds light on a complex topic in a clear and concise manner.", createdAt: "2024-02-27T08:00:00.000Z" },
-      { id: 3, user: "Daniel Smith", image: "https://picsum.photos/152/150", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", createdAt: "2024-02-26T08:00:00.000Z" },
-      { id: 4, user: "Emma Brown", image: "https://picsum.photos/150/151", description: "This post offers a fresh perspective on an age-old question. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", createdAt: "2024-02-25T08:00:00.000Z" },
-      { id: 5, user: "Michael Johnson", image: "https://picsum.photos/150/152", description: "Fantastic read! It really makes you think about the nature of pleasure and pain.", createdAt: "2024-02-24T08:00:00.000Z" },
-      { id: 6, user: "Sophie Wilson", image: "https://picsum.photos/153/150", description: "Great job! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", createdAt: "2024-02-23T08:00:00.000Z" },
-      { id: 7, user: "Ethan Thompson", image: "https://picsum.photos/150/153", description: "This post resonated with me on a deep level. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", createdAt: "2024-02-22T08:00:00.000Z" },
-    ]
-    
-  
+      {
+        id: 1,
+        user: "William Miller",
+        image: "https://picsum.photos/150/150",
+        description:
+          "Great insights! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        createdAt: "2024-02-28T08:00:00.000Z",
+      },
+      {
+        id: 2,
+        user: "Emily Jones",
+        image: "https://picsum.photos/151/150",
+        description:
+          "I found this post to be very enlightening. It sheds light on a complex topic in a clear and concise manner.",
+        createdAt: "2024-02-27T08:00:00.000Z",
+      },
+      {
+        id: 3,
+        user: "Daniel Smith",
+        image: "https://picsum.photos/152/150",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        createdAt: "2024-02-26T08:00:00.000Z",
+      },
+      {
+        id: 4,
+        user: "Emma Brown",
+        image: "https://picsum.photos/150/151",
+        description:
+          "This post offers a fresh perspective on an age-old question. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        createdAt: "2024-02-25T08:00:00.000Z",
+      },
+      {
+        id: 5,
+        user: "Michael Johnson",
+        image: "https://picsum.photos/150/152",
+        description:
+          "Fantastic read! It really makes you think about the nature of pleasure and pain.",
+        createdAt: "2024-02-24T08:00:00.000Z",
+      },
+      {
+        id: 6,
+        user: "Sophie Wilson",
+        image: "https://picsum.photos/153/150",
+        description:
+          "Great job! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        createdAt: "2024-02-23T08:00:00.000Z",
+      },
+      {
+        id: 7,
+        user: "Ethan Thompson",
+        image: "https://picsum.photos/150/153",
+        description:
+          "This post resonated with me on a deep level. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        createdAt: "2024-02-22T08:00:00.000Z",
+      },
+    ],
   },
-];
+]
 
 const Blog = () => {
   const [modalShow, setModalShow] = React.useState(false)
@@ -195,15 +283,15 @@ const Blog = () => {
                     className="text-start text-capitalize text-orange cursor-pointer"
                     onClick={() => setModalShow(true)}
                   >
-                  +{data?.comments.length - 5} more
+                    +{data?.comments.length - 5} more
                   </div>
                 )}
-                   <div
-                    className="text-start text-capitalize text-orange cursor-pointer"
-                    onClick={() => setModalShow(true)}
-                  >
-                    see all comments...
-                  </div>
+                <div
+                  className="text-start text-capitalize text-orange cursor-pointer"
+                  onClick={() => setModalShow(true)}
+                >
+                  see all comments...
+                </div>
               </Popover.Body>
               <MkModal
                 show={modalShow}

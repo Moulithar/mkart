@@ -1,18 +1,13 @@
-import React, { useRef } from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import { fashion1 } from "../Fashion/assets/images/1.jpg"
-import { fashion2 } from "../Fashion/assets/images/2.jpg"
-import { fashion3 } from "../Fashion/assets/images/3.jpg"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowLeft,
-  faArrowRight,
-  faCoffee,
-  faRightLeft,
+  faArrowRight
 } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React, { useRef } from "react"
+import { Col, Container, Row } from "react-bootstrap"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
 import "./assets/styles/style.css"
 
 const data = [

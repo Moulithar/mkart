@@ -2,8 +2,6 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import { Container } from "react-bootstrap"
-import { favi
- } from "./assets/favi.jpg"
 
 const BreadCrumb = ({ folder, subfolder }) => {
   return (

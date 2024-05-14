@@ -49,17 +49,16 @@
     margin: 10px 0;
 } */
 .footer-heading:after {
-    content: ""; /* Empty content */
-    display: none; /* Ensure the line appears as a block element */
-    border-bottom: 1px solid #777777; /* Add a 2px solid black line */
-    position: relative;
-    top: 10px;
-    left: 0;
-  
+  content: ""; /* Empty content */
+  display: none; /* Ensure the line appears as a block element */
+  border-bottom: 1px solid #777777; /* Add a 2px solid black line */
+  position: relative;
+  top: 10px;
+  left: 0;
 }
 
-@media screen and (max-width: 992px){
-    .footer-heading:after {
-        display: block; /* Ensure the line appears as a block element */  
-    }
+@media screen and (max-width: 992px) {
+  .footer-heading:after {
+    display: block; /* Ensure the line appears as a block element */
+  }
 }

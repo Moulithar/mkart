@@ -50,16 +50,16 @@ h6 {
 p {
   color: #878787;
 }
-ul {
-  margin-left: 0px;
-  padding-left: 0%;
+/* .main-footer ul {
+  margin-left: 0px !important;
+  padding-left: 0% !important;
 }
-ul li {
+.main-footer li {
   list-style: none;
   text-decoration: underline;
-}
-a {
-  color: #666;
+} */
+.main-footer a {
+  color: #666 !important;
   display: inline-block;
   margin: 0;
   text-transform: capitalize;
@@ -83,6 +83,7 @@ a:after {
 a:hover {
   color: #878787;
 }
+
 /* a:hover {
         color: var(--bs-link-hover-color);
     }
@@ -90,6 +91,7 @@ a:hover {
 
 a.fromleft:after {
   transform-origin: 100% 50%;
+  
 }
 a.fromleft:hover:after {
   transform: scaleX(1);

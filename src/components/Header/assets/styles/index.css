@@ -6,13 +6,12 @@ body {
 .header-top {
   background-color: rgb(232, 232, 232);
   color: #999;
-  padding-right: 25px;
   font-size: 14px;
-  height: 60px;
+  /* height: 60px; */
   width: 100%;
 }
 .left-header-top {
-  padding: 15px 35px;
+  margin-block: auto;
   font-size: 16px;
   text-transform: capitalize;
 }
@@ -105,8 +104,13 @@ navbar
   text-decoration: none;
 }
 
-li a{
+ul {
+  padding-left: 0 !important;
+}
+li a {
   text-decoration: none;
+  color: #727272;
+  list-style: none !important;
 }
 li {
   margin-bottom: 0px !important;
@@ -128,6 +132,6 @@ li {
   /* background-color: #ff5141; */
 }
 
-.form-control:focus{
+.form-control:focus {
   border-color: #ff5141 !important;
-} 
+}

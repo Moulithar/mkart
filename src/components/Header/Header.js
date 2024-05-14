@@ -80,74 +80,72 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-top ">
-        <Container>
-          <Row>
-            <div className="d-flex justify-content-between align-items-center gap-5 left-header-top">
-              <div className="d-flex gap-5">
-                <p>welcome to our store multicart</p>
-                <p>
-                  <i className="icons bi bi-telephone-fill"> &nbsp; </i>Call Us:
-                  123 - 456 - 7890
-                </p>
-              </div>
-              <div className="d-flex justify-content-end align-items-center gap-5 ">
-                <p>
-                  <i className="icons bi bi-heart-fill"></i> &nbsp; wishlist
-                </p>
-                <p>
-                  <i className=" icons bi bi-person-fill"> &nbsp; </i> account
-                </p>
-                <>
-                  <Button variant="" onClick={handleShow1}>
-                    Register
-                  </Button>
+      <div className="header-top">
+        <Container className="">
+          <div className="d-flex justify-content-between align-items-center gap-5 left-header-top">
+            <div className="d-flex gap-5">
+              <p className="m-0">welcome to our store multicart</p>
+              <p className="m-0">
+                <i className="icons bi bi-telephone-fill"> &nbsp; </i>Call Us:
+                123 - 456 - 7890
+              </p>
+            </div>
+            <div className="d-flex justify-content-end align-items-center gap-5 ">
+              <p className="m-0">
+                <i className="icons bi bi-heart-fill"></i> &nbsp; wishlist
+              </p>
+              <p className="m-0">
+                <i className=" icons bi bi-person-fill"> &nbsp; </i> account
+              </p>
+              <div className="d-none">
+                <Button variant="" onClick={handleShow1}>
+                  Register
+                </Button>
 
-                  <Modal show={show1} onHide={handleClose1}>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Register your account</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                      <Form onSubmit={handleSubmit}>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                          <Form.Label>Enter your name</Form.Label>
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter your name"
-                            ref={nameRef}
-                          />
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput2">
-                          <Form.Label>Email address</Form.Label>
-                          <Form.Control
-                            type="email"
-                            placeholder="name@example.com"
-                            ref={emailRef}
-                          />
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput3">
-                          <Form.Label>Enter your password</Form.Label>
-                          <Form.Control
-                            type="password"
-                            placeholder="Enter your password"
-                            ref={passwordRef}
-                          />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                          Submit
-                        </Button>
-                      </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <Button variant="secondary" onClick={handleClose1}>
-                        Close
+                <Modal show={show1} onHide={handleClose1}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Register your account</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form onSubmit={handleSubmit}>
+                      <Form.Group controlId="exampleForm.ControlInput1">
+                        <Form.Label>Enter your name</Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder="Enter your name"
+                          ref={nameRef}
+                        />
+                      </Form.Group>
+                      <Form.Group controlId="exampleForm.ControlInput2">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          placeholder="name@example.com"
+                          ref={emailRef}
+                        />
+                      </Form.Group>
+                      <Form.Group controlId="exampleForm.ControlInput3">
+                        <Form.Label>Enter your password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="Enter your password"
+                          ref={passwordRef}
+                        />
+                      </Form.Group>
+                      <Button variant="primary" type="submit">
+                        Submit
                       </Button>
-                    </Modal.Footer>
-                  </Modal>
-                </>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose1}>
+                      Close
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
             </div>
-          </Row>
+          </div>
         </Container>
       </div>
 
@@ -346,7 +344,7 @@ const Header = () => {
                             padding: "5px",
                           }}
                           className="d-flex justify-content-start gap-3 align-items-center"
-                          key={data.id}
+                          key={index}
                           onClick={() => {
                             navigate(`/${data?.link}`)
                           }}

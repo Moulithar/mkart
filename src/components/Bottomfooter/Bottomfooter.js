@@ -1,17 +1,17 @@
 import React from "react"
 // import Button from 'react-bootstrap/Button';
+import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 // import Form from 'react-bootstrap/Form';
 // import logo from "./assets/styles/logo.png";
+import dayjs from "dayjs"
 import img1 from "./assets/styles/img1.png"
 import img2 from "./assets/styles/img2.png"
 import img3 from "./assets/styles/img3.png"
 import img4 from "./assets/styles/img4.png"
 import img5 from "./assets/styles/img5.png"
 import "./assets/styles/index.css"
-import dayjs from "dayjs"
 
 const Bottomfooter = () => {
   return (

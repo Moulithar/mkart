@@ -1,5 +1,4 @@
-import React from "react" // Import React
-import Button from "react-bootstrap/Button"
+import React from "react"; // Import React
 import Modal from "react-bootstrap/Modal"
 import MkBtn from "../MkBtn/MkBtn"
 
