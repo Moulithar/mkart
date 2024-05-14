@@ -81,7 +81,7 @@ const Header = () => {
   return (
     <>
       <div className="header-top">
-        <Container className="">
+        <Container className="p-3">
           <div className="d-flex justify-content-between align-items-center gap-5 left-header-top">
             <div className="d-flex gap-5">
               <p className="m-0">welcome to our store multicart</p>
