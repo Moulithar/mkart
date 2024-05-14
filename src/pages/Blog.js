@@ -42,8 +42,8 @@ const blogData = [
       "Consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Lana rhodes" },
-      { id: 2, user: "Leah Gotti" },
+      { id: 1, user: "Lana del rey" },
+      { id: 2, user: "Leah james" },
     ],
     comments: [
       {
@@ -70,8 +70,8 @@ const blogData = [
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Riley Reid" },
-      { id: 2, user: "Mia Malkova" },
+      { id: 1, user: "Riley mason" },
+      { id: 2, user: "Mia " },
     ],
     comments: [
       {
@@ -97,8 +97,8 @@ const blogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Tori Black" },
-      { id: 2, user: "Sasha Grey" },
+      { id: 1, user: "Tori grey" },
+      { id: 2, user: "Sasha cavil" },
     ],
     comments: [
       {
@@ -126,8 +126,8 @@ const blogData = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Jada Stevens" },
-      { id: 2, user: "Tori Black" },
+      { id: 1, user: "Jada rosie" },
+      { id: 2, user: "Tori stevens" },
     ],
     comments: [
       {
@@ -154,8 +154,8 @@ const blogData = [
       "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Karlee grey" },
-      { id: 2, user: "Kendra spade" },
+      { id: 1, user: "Karlee brown" },
+      { id: 2, user: "Kendra jason" },
     ],
     comments: [
       {
@@ -182,8 +182,8 @@ const blogData = [
       "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
     postedby: "Admin Admin",
     likes: [
-      { id: 1, user: "Monique Alexander" },
-      { id: 2, user: "Kendra spade" },
+      { id: 1, user: "Monica foxx" },
+      { id: 2, user: "Nicole " },
     ],
     comments: [
       {
